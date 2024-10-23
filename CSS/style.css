@@ -1,0 +1,51 @@
+@import url(fonts.css);
+h1 {
+    color: red;
+}
+
+.menu {
+    background-image: url(/image/background.jpg);
+    background-size: cover;
+    background-position: 50% 90%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.menu img {
+    height: 50px;
+    margin-right: 10px;
+}
+.menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex: 1;
+}
+.menu li {
+    display: inline;
+    padding: 25px;
+}
+.menu a {
+    text-decoration: none;
+    color: #0000ff;
+    font-weight: bold;
+}
+.menu a:hover {
+    color: red;
+}
+.menu button {
+    font-weight: 600;
+    margin-right: 10px;
+    height: 40px;
+    width: 60px;
+    color: hsl(317 100% 54%);
+    background-color: #212f3c;
+    border: hsl(209 100% 54%) 2px solid;
+    border-radius: 15px;
+}
+.menu button:hover {
+    background-color: hsl(317 100% 54%);
+    color: #212f3c;
+    transition: opacity 100ms linear;
+}
