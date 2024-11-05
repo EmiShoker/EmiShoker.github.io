@@ -8,8 +8,11 @@
     min-height: 62px;
     margin: 0 auto 150px;
     padding: 8px 45px;
-    background-color: #1f1e1e;
-    color: #ffffff;
+    background-color: #090d1f;
+    color: #6bd7f9;
+    text-shadow:
+        0 0 16px,
+        0 0 8px Currentcolor;
     font-family: "Lora", serif;
     font-weight: 500;
     font-size: 36px;
@@ -30,7 +33,6 @@
 .events-list {
     display: flex;
     flex-wrap: wrap;
-    
 }
 .events {
     padding: 140px 0 100px;

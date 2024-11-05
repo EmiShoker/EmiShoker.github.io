@@ -8,13 +8,13 @@ h1 {
     color: cornflowerblue;
     text-shadow:
         0 0 16px,
-        0 0 7em currentColor;
+        0 0 7px currentColor;
     background-color: dimgray;
     padding: 10px;
     text-align: center;
     margin: 0;
 }
-.user-btn {
+.btn {
     display: inline-block;
     box-sizing: border-box;
     padding: 15px 40px;
@@ -36,9 +36,12 @@ h1 {
     cursor: pointer;
 }
 
-.user-btn:hover {
+.btn:hover {
     background-color: #1f1e1e;
     color: #ffffff;
+    text-shadow:
+        0 0 16px,
+        0 0 8px Currentcolor;
 }
 
 .body {
@@ -95,13 +98,13 @@ h1 {
     text-decoration: none;
 }
 
-.header-nav {
+.page-header-nav {
     display: flex;
     align-items: baseline;
     margin: 0 auto;
 }
 
-.nav-link {
+.page-header-nav-link {
     margin: 0 25px;
     color: #1f1e1e;
 
@@ -112,8 +115,11 @@ h1 {
     transition: color 0.5s;
 }
 
-.nav-link:hover {
+.page-header-nav-link:hover {
     color: #f91a55;
+    text-shadow:
+        0 0 16px,
+        0 0 8px Currentcolor;
 }
 
 .header-right-block {
