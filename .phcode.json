@@ -1,7 +1,7 @@
 {
-    "livePreviewUseDevServer": false,
+    "livePreviewUseDevServer": true,
     "livePreviewServerURL": "http://localhost:3000",
-    "livePreviewServerProjectPath": "/src/html/",
+    "livePreviewServerProjectPath": "/dist",
     "livePreviewHotReloadSupported": false,
     "livePreviewFramework": "Custom"
 }

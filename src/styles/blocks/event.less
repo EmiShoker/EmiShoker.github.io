@@ -1,0 +1,24 @@
+.event {
+    padding: 40px 0 150px;
+}
+.event-reserve {
+    display: grid;
+    gap: 65px 11%;
+    grid-template-columns: 405px calc(89% - 405px);
+    grid-template-areas:
+        "checks scheme"
+        "order legend";
+    width: 100%;
+}
+.reserve-checks {
+    grid-area: checks;
+}
+.reserve-order {
+    grid-area: order;
+}
+.reserve-checks {
+    grid-area: checks;
+}
+.reserve-legend {
+    grid-area: legend;
+}

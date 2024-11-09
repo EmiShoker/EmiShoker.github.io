@@ -4,12 +4,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: @gray;
+  min-height: 10vh;
+  background-color: #dedede;
   background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
   background-position:
     0 0,
@@ -18,8 +19,8 @@ body {
     auto,
     100% auto;
   background-repeat: repeat, repeat-y;
-  color: @black;
-  font-family: @font1;
+  color: #1f1e1e;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -27,16 +28,47 @@ body {
   overflow-x: hidden;
   padding-top: 147px;
 }
+.page-main {
+  padding: 69px 0;
+  &_title,
+  &_subtitle {
+    font-size: 40px;
+    color: @black;
+    text-shadow:
+      0 0 16px,
+      0 0 7px currentColor;
+    text-align: center;
+    margin: 0;
+  }
+  &_lenni {
+    margin-top: 40px;
+    background-color: @black;
+    text-align: center;
+  }
+  &_lenni span {
+    color: @black;
+    display: inline-block;
+    font-size: 250px;
+    background-color: white;
+    z-index: 1;
+  }
+  &_subtitle {
+    margin-top: 40px;
+  }
+}
 .main {
   flex: 1 0 auto;
+  background-color: rgba(240, 240, 240, 0.98);
 }
 .page-footer {
   flex: 0 0 auto;
 }
+
 a {
-  color: @black;
+  color: #1f1e1e;
   outline: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
