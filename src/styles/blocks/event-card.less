@@ -1,5 +1,11 @@
 .events {
     padding: 140px 0 100px;
+
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -30px -120px;
+    }
 }
 .listing {
     box-sizing: border-box;
@@ -10,10 +16,15 @@
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
-}
-.events-list {
-    display: flex;
-    flex-wrap: wrap;
+
+    &_arrow {
+        &_icon {
+            transform: rotate(90deg);
+            padding: 30px 0;
+        }
+        margin-top: 40px;
+        align-self: center;
+    }
 }
 
 .event-card {
@@ -23,72 +34,129 @@
     margin-right: 60px;
     width: calc(33.3333% - 60px);
     margin: 0 30px 120px;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    &_link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: #1f1e1e;
+        text-decoration: none;
+        &:hover {
+            color: #bc3324;
+            text-decoration-color: #bc3324;
+        }
+    }
+
+    &_picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 0 25px;
+        text-decoration: none;
+        overflow: hidden;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 107.16%;
+        }
+    }
+
+    &_title {
+        margin: 0 0 15px;
+        min-height: 66px;
+        color: #1f1e1e;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        text-decoration: double;
+        transition:
+            color 0.5s,
+            text-decoration-color 0.5s;
+
+        &:hover {
+            color: red;
+        }
+    }
+
+    &_img {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &_time {
+        margin: 15px 0 0;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    &_description {
+        flex-grow: 1;
+    }
 }
-.event-card:nth-child(3n) {
-    margin-right: 0;
+.add_description {
+    width: 70%;
+    margin: 80px auto;
 }
-.events-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -30px -120px;
+.table {
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid @black;
+    text-align: center;
+    width: 70%;
+    &_tr {
+        &:nth-child(2n-1) {
+            background-color: @grey_white;
+        }
+    }
+    &_body-th,
+    &_th,
+    &_td {
+        padding: 15px 15px;
+        border: 1px solid @black;
+    }
+    &_head-tr {
+        text-transform: uppercase;
+        font-family: @font1;
+    }
+    &_body-th {
+        text-align: left;
+    }
+    &_foot-th {
+        padding: 30px;
+    }
 }
-.event-card-link {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: #1f1e1e;
-    text-decoration: none;
-}
-.event-card-link:hover {
-    color: #bc3324;
-    text-decoration-color: #bc3324;
-}
-.event-card-picture {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: 0 0 25px;
-    text-decoration: none;
-    overflow: hidden;
-}
-.event-card-picture::after {
+.ok {
     content: "";
     display: block;
-    width: 100%;
-    padding-top: 107.16%;
-}
-.event-card-img {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.event-card-title {
-    margin: 0 0 15px;
-    min-height: 66px;
-    color: #1f1e1e;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    text-decoration: double;
-    transition:
-        color 0.5s,
-        text-decoration-color 0.5s;
-}
-event-card-title:hover {
-    color: red;
-}
-.event-card-description,
-.event-card-time {
-    margin: 15px 0 0;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 19px;
-}
-.event-card-description {
-    flex-grow: 1;
+    position: relative;
+    margin: auto;
+    width: 26px;
+    height: 26px;
+    background-color: @black;
+    border-radius: 50%;
+    &::after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 4px;
+        left: 9px;
+        width: 8px;
+        height: 14px;
+        border-right: 2px solid @white;
+        border-bottom: 2px solid @white;
+        transform: rotate(45deg);
+    }
 }
