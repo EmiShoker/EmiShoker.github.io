@@ -118,8 +118,8 @@ textarea {
   visibility: hidden !important;
   pointer-events: none !important;
 }
-.show-popup .body {
-  overflow: auto;
+.show-popup body {
+  overflow: hidden;
 }
 .show-popup #eventPP {
   display: -webkit-box;
@@ -149,7 +149,7 @@ textarea {
 .btn:hover {
   background-color: #1f1e1e;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   text-shadow: 0 0 16px,
             0 0 8px Currentcolor;
 }
@@ -209,7 +209,7 @@ textarea {
   padding-right: 40px;
 }
 .listing_arrow {
-  margin-top: 40px;
+  margin: 80px auto;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -301,6 +301,8 @@ textarea {
           flex-grow: 1;
 }
 .add_description {
+  font-family: "Open Sans", sans-serif;
+  line-height: 21px;
   width: 70%;
   margin: 80px auto;
 }
@@ -595,6 +597,19 @@ textarea {
   letter-spacing: 0.02em;
   z-index: 1;
 }
+.pp_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 45px;
+}
+.pp_btn-submit {
+  width: 50%;
+}
+.pp_btn-close {
+  width: 50%;
+  border: none;
+}
 .field {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,6 +760,7 @@ textarea {
   min-height: 24px;
   padding-top: 2px;
   padding-left: 24px;
+  margin: 20px 0 40px;
   color: #1f1e1e;
   cursor: pointer;
 }
@@ -931,7 +947,7 @@ textarea {
   text-decoration: none;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
-  font-family: "mak", serif;
+  font-family: "Open Sans", sans-serif;
 }
 .page-header_nav-link:hover {
   text-shadow: 0 0 16px,

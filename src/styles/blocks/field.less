@@ -78,6 +78,17 @@
         letter-spacing: 0.02em;
         z-index: 1;
     }
+    &_btn {
+        display: flex;
+        gap: 45px;
+        &-submit {
+            width: 50%;
+        }
+        &-close {
+            width: 50%;
+            border: none;
+        }
+    }
 }
 
 .field {
@@ -214,6 +225,7 @@
     min-height: 24px;
     padding-top: 2px;
     padding-left: 24px;
+    margin: 20px 0 40px;
     color: @black;
     cursor: pointer;
     &_mark {
