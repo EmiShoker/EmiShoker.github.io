@@ -11,7 +11,6 @@
     display: flex;
     width: 100%;
     & + .article-card {
-        //каждая следующая будет иметь отступ сверху
         margin-top: 120px;
         &::before {
             content: "";
@@ -30,7 +29,7 @@
     }
     &:hover {
         .article-card_picture {
-            box-shadow: 0 0 30px fade(@black, 55%);
+            box-shadow: 0 0 60px fade(@black, 55%);
         }
     }
     &_link {
@@ -55,7 +54,7 @@
         display: block;
         position: relative;
         width: 100%;
-        transition: box-shadow 0.5s;
+        transition: box-shadow 0.3s;
         overflow: hidden;
         &::after {
             content: "";
@@ -99,8 +98,8 @@
         color: @black;
         text-decoration-color: transparent;
         transition:
-            color 0.5s,
-            text-decoration-color 0.5s;
+            color 0.3s,
+            text-decoration-color 0.3s;
         &:hover {
             color: @red;
             text-decoration-color: @red;
