@@ -15,7 +15,7 @@
     <header class="page-header">
       <div class="page-header_container">
         <a href="index.html" class="page-header_logo">
-          <svg class="page-header_logo-icon" width="202" height="147">
+          <svg class="page-header_logo-icon">
             <use xlink:href="assets/icons/symbols.svg#logo"></use>
           </svg>
         </a>
@@ -25,8 +25,22 @@
           <a href="#" class="page-header_nav-link">О нас</a>
           <a href="#" class="page-header_nav-link">Контакты</a>
         </nav>
+        <div class="page-header_nav-user">
+          <a href="#" class="page-header_nav-user-link"> Александр С. </a>
+          <a href="#" class="page-header_nav-logout">
+            <svg class="page-header_nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
         <div class="page-header_right-block">
-          <a href="#" class="btn user-btn"> Войти </a>
+          <a href="#" class="btn page-header_user-btn">
+            Войти
+            <svg class="page-header_user-icon" width="21" height="18">
+              <use xlink:href="assets/icons/symbols.svg#user"></use>
+            </svg>
+          </a>
+          <button type="button" class="page-header_nav-toggle"></button>
         </div>
       </div>
     </header>
@@ -34,9 +48,7 @@
 
   <div class="page-main">
     <h1 class="page-main_title">АРТ — ПРОСТРАНСТВО</h1>
-    <div class="page-main_lenni">
-      <img src="../assets/images/LENNI.svg" />
-    </div>
+    <img class="page-main_lenni" src="assets/images/LENNI.svg" />
     <h1 class="page-main_subtitle">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
       <br />МЕСТО ДЛЯ НАСТОЯЩЕГО
     </h1>
@@ -52,6 +64,19 @@
   <main class="main">
     <section class="listing events_listing">
       <h2 class="section-title">О нас</h2>
+
+      <div class="about">
+        <p class="about_title">Проект «Millennials»</p>
+        <p class="about_text">
+          Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и
+          <br />
+          желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас
+          <br />
+          возможность помочь им воплотить их мечту в реальность.
+        </p>
+        <img class="about_img1 img" src="assets/images/main1.svg" width="870px" height="577px" />
+      </div>
+
       <h2 class="section-title">Мероприятия</h2>
 
       <div class="events_list">
@@ -294,7 +319,7 @@
   </div>
 
   <br />
-  <footer class="page-footer"></footer>
+  <footer class="page-footer">footer</footer>
 
 </body>
 

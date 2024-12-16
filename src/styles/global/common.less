@@ -3,8 +3,8 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top left, @white, transparent 50%),
-    radial-gradient(circle at bottom right, @white, transparent 50%), @grey;
+  background: radial-gradient(circle at top left, @white, transparent 60%),
+    radial-gradient(circle at bottom right, @white, transparent 60%), @gray;
 }
 
 .body {
@@ -29,6 +29,13 @@ body {
   line-height: 1.375;
   overflow-x: hidden;
   padding-top: 147px;
+
+  @media @bw1660 {
+    padding-top: 111px;
+  }
+  @media @bw768 {
+    padding-top: 70px;
+  }
 }
 
 a {
@@ -52,7 +59,7 @@ select {
 input,
 textarea {
   &::placeholder {
-    color: @grey;
+    color: @gray;
   }
 }
 input:focus,
