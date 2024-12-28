@@ -25,9 +25,10 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 25px;
+        border-left: 1px solid @grey;
     }
     &_td {
-        border: 1px solid @gray_white;
+        border: 1px solid @grey;
         border-bottom: none;
         border-right: none;
     }
@@ -42,7 +43,7 @@
         font-family: @font1;
     }
     &_body-th {
-        border: 1px solid @gray_white;
+        border: 1px solid @grey;
         text-align: left;
         padding-left: 0;
         border-top: none;
@@ -62,6 +63,7 @@
     height: 26px;
     background-color: @black;
     border-radius: 50%;
+
     &::after {
         content: "";
         box-sizing: border-box;
@@ -70,8 +72,9 @@
         left: 9px;
         width: 8px;
         height: 14px;
-        border-right: 2px solid @white;
-        border-bottom: 2px solid @white;
+        border-style: solid;
+        border-width: 0 3px 3px 0;
+        border-image: linear-gradient(#83e1ff 40%, #fb3f4f) 1;
         transform: rotate(45deg);
     }
 }

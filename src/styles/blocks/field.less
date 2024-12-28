@@ -15,6 +15,11 @@
         background-color: rgba(28, 27, 27, 0.4);
         backdrop-filter: blur(50px);
     }
+    &_x-btn {
+        position: absolute;
+        top: -25px;
+        right: -25px;
+    }
     &_wrapper {
         box-sizing: border-box;
         position: relative;
@@ -23,7 +28,7 @@
         width: 100%;
         max-width: 1210px;
         margin: auto;
-        background-color: @gray_white;
+        background-color: @grey-white;
         background-image: url(../assets/images/noise.png);
         background-position: 0 0;
         background-size: auto;
@@ -42,23 +47,6 @@
         align-self: flex-end;
         width: 0;
         height: 0;
-    }
-    &_x-btn {
-        position: absolute;
-        top: -25px;
-        right: -25px;
-        width: 50px;
-        height: 50px;
-        background-color: @black;
-        border: none;
-        border-radius: 50%;
-        transition: 0.5s;
-
-        &:hover {
-            background-color: #434343;
-            border-radius: 35%;
-            transform: rotate(90deg);
-        }
     }
     &_title {
         box-sizing: border-box;
@@ -90,7 +78,20 @@
         }
     }
 }
+.x-btn {
+    width: 50px;
+    height: 50px;
+    background-color: @black;
+    border: none;
+    border-radius: 50%;
+    transition: 0.5s;
 
+    &:hover {
+        background-color: #434343;
+        border-radius: 35%;
+        transform: rotate(90deg);
+    }
+}
 .field {
     display: flex;
     flex-direction: column;

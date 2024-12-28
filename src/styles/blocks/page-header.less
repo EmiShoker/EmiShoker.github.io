@@ -25,10 +25,10 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: fade(@gray, 98%);
+        background-color: fade(@grey, 98%);
         backdrop-filter: blur(20px);
         @supports (backdrop-filter: blur(20px)) {
-            background-color: fade(@gray, 25%);
+            background-color: fade(@grey, 25%);
             backdrop-filter: blur(20px);
         }
     }
@@ -75,7 +75,7 @@
             flex-direction: column;
             align-items: flex-start;
             padding: 211px 30px 30px;
-            background-color: fade(@gray, 98%);
+            background-color: fade(@grey, 98%);
             transition: transform 0.4s;
             transform: translateX(-100%);
 
@@ -83,34 +83,16 @@
             overflow-y: auto;
 
             @supports (backdrop-filter: blur(20px)) {
-                background-color: fade(@gray, 70%);
+                background-color: fade(@grey, 70%);
                 backdrop-filter: blur(20px);
             }
         }
         @media @bw768 {
             padding: 150px 20px 30px;
         }
-    }
-    &_nav-link {
-        margin: 0 25px;
-        color: #1f1e1e;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 25px;
-        text-decoration: none;
-        transition: color 0.2s;
-        font-family: @font1;
-        &:hover {
-            text-shadow:
-                0 0 16px,
-                0 0 7px currentColor;
-            color: #bc3324;
-        }
 
-        @media @bw1020 {
-            margin: 0 0 40px;
-            font-size: 16px;
-            line-height: 22px;
+        &-link {
+            margin: 0 25px;
         }
     }
     &_right-block {
@@ -237,5 +219,26 @@
         width: 24px;
         height: 24px;
         font-size: 0;
+    }
+}
+.link {
+    color: #1f1e1e;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: @font1;
+    &:hover {
+        text-shadow:
+            0 0 16px,
+            0 0 7px currentColor;
+        color: @red;
+    }
+
+    @media @bw1020 {
+        margin: 0 0 40px;
+        font-size: 16px;
+        line-height: 22px;
     }
 }

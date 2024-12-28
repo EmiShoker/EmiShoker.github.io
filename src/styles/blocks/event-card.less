@@ -53,20 +53,19 @@
     &_link {
         display: flex;
         flex-direction: column;
-        color: #1f1e1e;
-        text-decoration: none;
-        &:hover {
-            color: #bc3324;
+        &:hover .listing_arrow-icon {
+            transform: rotate(270deg);
         }
     }
 
     &_arrow {
-        &_icon {
+        &-icon {
             transform: rotate(90deg);
+            transition: transform 0.3s;
             padding: 30px 0;
+            margin: auto;
         }
-        margin: 80px auto;
-        align-self: center;
+        margin: 70px auto;
     }
 }
 
