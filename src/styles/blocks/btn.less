@@ -4,7 +4,7 @@
     padding: 15px 40px;
     border: 1px solid #1f1e1e;
     background-color: transparent;
-    color: #1f1e1e;
+    color: @black;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -18,11 +18,228 @@
     overflow: hidden;
     cursor: pointer;
     &:hover {
-        background-color: #1f1e1e;
-        color: #ffffff;
+        background-color: @black;
+        color: @white;
         border: 1px solid @white;
         text-shadow:
+            0 0 8px,
+            0 0 4px Currentcolor;
+    }
+}
+.link {
+    color: #1f1e1e;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: @font1;
+    &:hover {
+        text-shadow:
             0 0 16px,
-            0 0 8px Currentcolor;
+            0 0 7px currentColor;
+        color: @red;
+    }
+
+    @media @bw1020 {
+        margin: 0 0 40px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+.x-btn {
+    width: 50px;
+    height: 50px;
+    background-color: @black;
+    border: none;
+    border-radius: 50%;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: #434343;
+        border-radius: 35%;
+    }
+}
+.choice {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; //
+    margin: auto;
+    width: 100%;
+    max-width: 624px;
+    padding: 0 0 150px;
+    &_title {
+        text-transform: uppercase;
+        font-weight: 100;
+        text-align: center;
+    }
+    &_btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; // Выравнивание по вертикали
+        //flex-wrap: wrap;
+        max-width: 624px;
+        gap: 130px;
+    }
+    &_btn-r,
+    &_btn-l {
+        padding: 15px 25px;
+        flex: 1;
+        width: 300px;
+    }
+    &_btn-r {
+        border: 1px solid @red;
+        color: @white;
+        background-color: @red;
+        &:hover {
+            border-color: @red;
+            color: @red;
+            background-color: @white;
+        }
+    }
+}
+.arrow {
+    //<div class="about_block2-link_block">
+    //    <svg class="arrow arrow_icon">
+    //        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+    //    </svg>
+    //</div>
+
+    flex-shrink: 0;
+    position: absolute;
+    display: inline-block;
+    width: 92px;
+    height: 62px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: @black;
+    font-size: 0;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        color: @red;
+        transform: rotate(-15deg);
+    }
+
+    @media @bw1340 {
+        width: 67px;
+        height: 40px;
+    }
+
+    &_icon {
+        width: 100%;
+        height: 100%;
+    }
+}
+.radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &_input {
+        .is-hidden();
+
+        &:checked {
+            & ~ .radio_mark {
+                //~, который означает "соседний элемент". Это значит, что стиль будет применен к элементу с классом .radio_mark, который расположен сразу рядом после элемента &_input
+                background-color: @black;
+            }
+        }
+    }
+    &_item {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        min-height: 23px;
+        padding-left: 23px;
+        color: @black;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &_mark {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 23px;
+        height: 23px;
+        border: 2px solid @black;
+        border-radius: 50%;
+        padding: 3px;
+        background-clip: content-box;
+        background-color: transparent;
+        transition: background-color 0.3s;
+    }
+    &_label {
+        margin-left: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+.check {
+    &_input {
+        .is-hidden();
+
+        &:checked {
+            & ~ .check_mark {
+                background-color: @black;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 7px;
+                    top: 2px;
+                    width: 6px;
+                    height: 12px;
+
+                    border-bottom: 2px solid @white;
+                    border-right: 2px solid @white;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 24px;
+    padding-top: 2px;
+    padding-left: 24px;
+    margin: 20px 0 40px;
+    color: @black;
+    cursor: pointer;
+    &_mark {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        border: 1px solid @black;
+    }
+    &_label {
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+
+        &-s {
+            font-size: 14px;
+            line-height: 19px;
+        }
     }
 }

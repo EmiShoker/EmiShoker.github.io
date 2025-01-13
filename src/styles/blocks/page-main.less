@@ -21,43 +21,90 @@
         text-align: center;
     }
 }
-.choice {
-    width: 100%;
-    &_title {
-        text-transform: uppercase;
-        font-weight: 100;
-    }
-    &_btn-container {
-        width: 100%;
-        display: inline-flex;
-        justify-content: space-evenly;
-    }
-    &_btn-r {
-        width: 300px;
-        border: 1px solid #bc3324;
-        color: @white;
-        background-color: #bc3324;
-        &:hover {
-            color: #bc3324;
-            background-color: @white;
-            border: 1px solid #bc3324;
-        }
-    }
-    &_btn-b {
-        width: 300px;
-    }
-}
 .about {
-    &_title {
-        font-family: @font1;
-        font-size: 44px;
-        font-weight: 700;
+    &_block1 {
+        display: block;
+        position: relative;
+        margin: 100px 0 80px;
+        &-img1 {
+            width: 870px;
+            height: 577px;
+        }
+
+        &-img2 {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 404px;
+            height: 493px;
+        }
     }
     &_text {
         display: flex;
         justify-content: flex-end;
-        line-height: 24.51px;
-        font-size: 24px;
-        margin-bottom: 150px;
+    }
+    &_block2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        margin-top: 100px;
+        width: 100%;
+
+        &-grid1 {
+            height: 381px;
+
+            &-rectangle {
+                display: block;
+                background-color: @red;
+                width: 930px;
+                height: 246px;
+                z-index: 0;
+            }
+
+            &-img {
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 48px;
+                width: 872px;
+                height: 361px;
+                z-index: 1;
+            }
+        }
+
+        &-grid2 {
+            display: flex;
+            flex-direction: column;
+            height: 381px;
+            margin: auto;
+
+            &-text2 {
+                margin: auto 0;
+            }
+            &-link {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &_text {
+                    display: flex;
+                    align-content: flex-start;
+                    margin-right: auto;
+                }
+                &_arrow {
+                    &-icon {
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+
+    &_title {
+        display: flex;
+        font-family: @font1;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 59.92px;
     }
 }

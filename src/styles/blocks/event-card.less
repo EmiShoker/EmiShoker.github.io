@@ -1,29 +1,3 @@
-.events {
-    padding: 140px 0 100px;
-
-    &_list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -30px -120px;
-
-        @media @bw1660 {
-            margin: 0 -20px -100px;
-        }
-        @media @bw1340 {
-            margin: 0 -15px -100px;
-        }
-        @media @bw1020 {
-            justify-content: center;
-            margin: 0 -15px -80px;
-        }
-        @media @bw768 {
-            margin: 0 -10px -80px;
-        }
-        @media @bw650 {
-            margin: 0 0 -60px;
-        }
-    }
-}
 .listing {
     box-sizing: border-box;
     display: flex;
@@ -53,6 +27,7 @@
     &_link {
         display: flex;
         flex-direction: column;
+
         &:hover .listing_arrow-icon {
             transform: rotate(270deg);
         }
@@ -60,10 +35,10 @@
 
     &_arrow {
         &-icon {
-            transform: rotate(90deg);
             transition: transform 0.3s;
             padding: 30px 0;
             margin: auto;
+            transform: rotate(90deg);
         }
         margin: 70px auto;
     }

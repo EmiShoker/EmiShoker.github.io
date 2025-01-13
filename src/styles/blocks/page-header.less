@@ -15,6 +15,9 @@
         height: 111px;
     }
     @media @bw768 {
+        height: 111px;
+    }
+    @media @bw320 {
         height: 70px;
     }
     &::before {
@@ -52,6 +55,10 @@
             height: 111px;
         }
         @media @bw768 {
+            width: 152px;
+            height: 111px;
+        }
+        @media @bw360 {
             width: 96px;
             height: 70px;
         }
@@ -110,32 +117,6 @@
         }
     }
     &_user-btn {
-        display: inline-block;
-        box-sizing: border-box;
-        padding: 15px 40px;
-        border: 1px solid #1f1e1e;
-        background-color: transparent;
-        color: #1f1e1e;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        text-decoration: none;
-        transition:
-            color 0.5s,
-            background-color 0.5s,
-            border-color 0.5s;
-        overflow: hidden;
-        cursor: pointer;
-        &:hover {
-            background-color: #1f1e1e;
-            color: #ffffff;
-            border: 1px solid @white;
-            text-shadow:
-                0 0 16px,
-                0 0 8px Currentcolor;
-        }
         @media @bw1020 {
             display: flex;
             width: 40px;
@@ -219,26 +200,5 @@
         width: 24px;
         height: 24px;
         font-size: 0;
-    }
-}
-.link {
-    color: #1f1e1e;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
-    text-decoration: none;
-    transition: color 0.2s;
-    font-family: @font1;
-    &:hover {
-        text-shadow:
-            0 0 16px,
-            0 0 7px currentColor;
-        color: @red;
-    }
-
-    @media @bw1020 {
-        margin: 0 0 40px;
-        font-size: 16px;
-        line-height: 22px;
     }
 }
