@@ -19,9 +19,12 @@
         position: absolute;
         top: -25px;
         right: -25px;
-
         &:hover {
             transform: rotate(90deg);
+        }
+
+        &_icon {
+            pointer-events: none;
         }
     }
     &_wrapper {
@@ -80,5 +83,14 @@
             width: 50%;
             border: none;
         }
+    }
+}
+.show-event-popup {
+    body {
+        overflow: hidden;
+    }
+
+    #js-eventPP {
+        display: flex;
     }
 }

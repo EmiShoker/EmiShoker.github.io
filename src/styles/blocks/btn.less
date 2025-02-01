@@ -2,7 +2,7 @@
     display: inline-block;
     box-sizing: border-box;
     padding: 15px 40px;
-    border: 1px solid #1f1e1e;
+    border: 1.5px solid #1f1e1e;
     background-color: transparent;
     color: @black;
     font-family: "Open Sans", sans-serif;
@@ -64,14 +64,16 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center; //
+    align-items: center;
     margin: auto;
     width: 100%;
     max-width: 624px;
     padding: 0 0 150px;
     &_title {
+        font-family: @font2;
+
         text-transform: uppercase;
-        font-weight: 100;
+        font-weight: 400;
         text-align: center;
     }
     &_btn-container {
@@ -106,11 +108,10 @@
     //    </svg>
     //</div>
 
-    flex-shrink: 0;
-    position: absolute;
-    display: inline-block;
-    width: 92px;
-    height: 62px;
+    position: relative;
+    display: flex;
+    width: 91px;
+    height: 60px;
     padding: 0;
     border: none;
     background: none;
@@ -124,7 +125,7 @@
         transform: rotate(-15deg);
     }
 
-    @media @bw1340 {
+    @media @bw1020 {
         width: 67px;
         height: 40px;
     }

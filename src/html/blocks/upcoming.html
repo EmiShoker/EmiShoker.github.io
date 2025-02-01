@@ -1,0 +1,107 @@
+<section class="upcoming @@class">
+    <div class="upcoming_wrapper">
+        <div class="upcoming_container">
+            <h2 class="upcoming_title section-title">Мероприятия</h2>
+
+            <div class="upcoming_swiper swiper swiper--3s js-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+                        @@include('event-card.html', {
+                            "class": "",
+                            "img": "assets/images/events/nirvana.svg",
+                            "img_webp": "assets/images/events/nirvana.webp",
+                            "alt": "nirvana",
+                            "title": "Собираемся и слушаем альбом Nirvana.",
+                            "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                            "time": "07.12.2022 | начало 18.00",
+                            "datetime": "2022-12-07T18:00"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+                        @@include('event-card.html', {
+                            "class": "",
+                            "img": "assets/images/events/HowStuffWorks.svg",
+                            "img_webp": "assets/images/events/HowStuffWorks.webp",
+                            "alt": "nirvana",
+                            "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                            "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+                            "time": "14.12.2022 | начало 18.30",
+                            "datetime": "2022-12-14T18:30"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+                        @@include('event-card.html', {
+                            "class": "",
+                            "img": "assets/images/events/Sade.svg",
+                            "img_webp": "assets/images/events/Sade.webp",
+                            "alt": "nirvana",
+                            "title": "Вечер | The Best of Sade",
+                            "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                            "time": "16.12.2021 | начало 18.00",
+                            "datetime": "2021-12-16T18:00"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+                        @@include('event-card.html', {
+                            "class": "",
+                            "img": "assets/images/events/Malevich.svg",
+                            "img_webp": "assets/images/events/Malevich.webp",
+                            "alt": "Malevich",
+                              "title": "Выставка Малевича в Томске",
+                              "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
+                              "time": "23.12.2022 | начало 20.00",
+                              "datetime": "2022-12-23T20:00"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+                        @@include('event-card.html', {
+                            "class": "",
+                            "img": "assets/images/events/Tatler.svg",
+                            "img_webp": "assets/images/events/Tatler.webp",
+                              "alt": "Tatler",
+                              "title": "Мастер — класс по студийной съемке от Tatler",
+                              "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
+                              "time": "25.12.2022 | начало 13.00",
+                              "datetime": "2022-12-25T13:00"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+                        @@include('event-card.html', {
+                            "class": "",
+                            "img": "assets/images/events/Hatters.svg",
+                            "img_webp": "assets/images/events/Hatters.webp",
+                             "alt": "Hatters",
+                              "title": "Повесилимся на славу на концерте The Hatters",
+                              "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко.",
+                              "time": "23.12.2022 | начало 10.00",
+                              "datetime": "2022-12-23T10:00"
+                        })
+                    </div>
+                </div>
+                <footer class="swiper-footer">
+                    <button type="button" class="arrow swiper-arrow-prev arrow--left">
+                        <svg class="arrow_icon" width="92" height="62">
+                            <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                    </button>
+
+                    <div class="swiper-pagination"></div>
+
+                    <button type="button" class="swiper-arrow-next arrow">
+                        <svg class="arrow_icon" width="92" height="62">
+                            <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </footer>
+            </div>
+
+            <a href="events.html" class="upcoming_link link">Смотреть все</a>
+        </div>
+    </div>
+</section>

@@ -1,7 +1,7 @@
-<div class="pp" id="eventPP">
+<div class="pp" id="js-eventPP">
     <div class="pp_wrapper">
         <div class="pp_sticky">
-            <button class="pp_x-btn x-btn">
+            <button class="pp_x-btn x-btn js-ppCloseBtn">
                 <svg class="x-btn_icon" width="18" height="18">
                     <use xlink:href="assets/icons/symbols.svg#x"></use>
                 </svg>
@@ -61,17 +61,23 @@
 
                     <label class="field">
                         <span class="field_label">Фамилия*</span>
-                        <input class="field_input" type="text" placeholder="Фамилия" name="name" required />
+                        <input class="field_input" type="text" placeholder="Фамилия" name="surname" required />
                     </label>
 
                     <label class="field">
                         <span class="field_label">Телефон*</span>
-                        <input class="field_input" type="text" placeholder="Телефон" name="name" required />
+                        <input
+                            class="field_input"
+                            type="text"
+                            placeholder="+7 (___) ___ __ __"
+                            maxlength="18"
+                            name="phone"
+                            required />
                     </label>
 
                     <label class="field">
                         <span class="field_label">Email*</span>
-                        <input class="field_input" type="text" placeholder="Email" name="name" required />
+                        <input class="field_input" type="text" placeholder="Email" name="email" required />
                     </label>
                 </div>
                 <label class="field">
@@ -92,7 +98,7 @@
                 </label>
                 <div class="pp_btn">
                     <button class="pp_btn-submit btn" type="submit">Отправить</button>
-                    <button class="pp_btn-close btn" type="button">Закрыть</button>
+                    <button class="pp_btn-close btn js-ppCloseBtn" type="button">Закрыть</button>
                 </div>
             </form>
         </div>
