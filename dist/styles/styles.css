@@ -108,6 +108,14 @@ textarea {
   line-height: 26px;
   font-size: 20px;
 }
+.title-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+}
 .width_624 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1037,6 +1045,95 @@ button.swiper-pagination-bullet {
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 2px 3px;
 }
+.about {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.about_block1 {
+  display: block;
+  position: relative;
+  margin: 100px 0 80px;
+}
+.about_block1-img1 {
+  width: 870px;
+  height: 577px;
+}
+.about_block1-img2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 404px;
+  height: 493px;
+}
+.about_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.about_block2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  margin-top: 100px;
+}
+.about_block2-grid1 {
+  height: 381px;
+}
+.about_block2-grid1-rectangle {
+  display: block;
+  background-color: #bc3324;
+  width: 930px;
+  height: 246px;
+}
+.about_block2-grid1-img {
+  position: absolute;
+  top: 20px;
+  left: 48px;
+  width: 872px;
+  height: 361px;
+  z-index: 1;
+}
+.about_block2-grid2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 381px;
+  margin: auto;
+}
+.about_block2-grid2-text2 {
+  margin: auto 0;
+}
+.about_block2-grid2-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about_block2-grid2-link_arrow {
+  margin-left: auto;
+}
+.about_block2-grid2-link_arrow-icon {
+  position: static;
+}
 .article-card {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -1450,6 +1547,30 @@ button.swiper-pagination-bullet {
 .check_label-s {
   font-size: 14px;
   line-height: 19px;
+}
+.contacts_map {
+  width: 400px;
+  height: 400px;
+}
+.map-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .section-title {
   -webkit-box-sizing: border-box;
@@ -2158,7 +2279,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 1210px;
   margin: auto;
-  background-color: #bfbfbf;
+  background-color: #dededefa;
   background-image: url(../assets/images/noise.png);
   background-position: 0 0;
   background-size: auto;
@@ -2398,102 +2519,6 @@ button.swiper-pagination-bullet {
 .page-main_choice {
   text-align: center;
 }
-.about_block1 {
-  display: block;
-  position: relative;
-  margin: 100px 0 80px;
-}
-.about_block1-img1 {
-  width: 870px;
-  height: 577px;
-}
-.about_block1-img2 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 404px;
-  height: 493px;
-}
-.about_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.about_block2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  margin-top: 100px;
-  width: 100%;
-}
-.about_block2-grid1 {
-  height: 381px;
-}
-.about_block2-grid1-rectangle {
-  display: block;
-  background-color: #bc3324;
-  width: 930px;
-  height: 246px;
-  z-index: 0;
-}
-.about_block2-grid1-img {
-  display: block;
-  position: absolute;
-  top: 20px;
-  left: 48px;
-  width: 872px;
-  height: 361px;
-  z-index: 1;
-}
-.about_block2-grid2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 381px;
-  margin: auto;
-}
-.about_block2-grid2-text2 {
-  margin: auto 0;
-}
-.about_block2-grid2-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.about_block2-grid2-link_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  margin-right: auto;
-}
-.about_block2-grid2-link_arrow-icon {
-  position: static;
-}
-.about_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "Open Sans", sans-serif;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 59.92px;
-}
 .line {
   width: 80%;
   gap: 45px;
@@ -2700,6 +2725,14 @@ button.swiper-pagination-bullet {
   .swiper-footer {
     width: 300px;
   }
+  .about {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .map-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .section-title .width_624 {
     min-height: 52px;
     margin-bottom: 100px;
@@ -2876,6 +2909,14 @@ button.swiper-pagination-bullet {
   .swiper-footer {
     margin: 60px auto 0;
   }
+  .about {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .map-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .section-title .width_624 {
     min-height: 42px;
     margin-bottom: 80px;
@@ -2953,6 +2994,14 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width: 319px) {
+  .about {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .map-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .upcoming_container {
     padding-left: 20px;
     padding-right: 20px;
