@@ -26,7 +26,7 @@
           <a href="events.html" class="page-header_nav-link link">Мероприятия</a>
           <a href="#blog" class="page-header_nav-link link">Блог</a>
           <a href="#" class="page-header_nav-link link">О нас</a>
-          <a href="#" class="page-header_nav-link link">Контакты</a>
+          <a href="#contacts" class="page-header_nav-link link">Контакты</a>
         </nav>
         <div class="page-header_nav-user">
           <a href="#" class="page-header_nav-user-link"> Александр С. </a>
@@ -64,7 +64,7 @@
       </div>
     </div>
   </div>
-  <main class="main">
+  <main class="page-main">
     <section class="about">
       <h2 class="section-title">О нас</h2>
       <p class="about_title title-text">Проект «Millennials»</p>
@@ -361,11 +361,65 @@
 
     </div>
 
-    <h2 class="section-title">контакты</h2>
-    <div class="map-container">
-      <div class="contacts_map" id="js-contactsMap"></div>
-    </div>
+    <h2 id="contacts" class="section-title">контакты</h2>
+    <section class="contacts">
+      <div class="contacts_wrapper">
+        <div class="contacts_info">
+          <div class="contacts_info-img">
+            <svg class="contacts_info-img_icon">
+              <use xlink:href="assets/icons/symbols.svg#location"></use>
+            </svg>
+          </div>
+          <div class="contacts_info-text">
+            <h4 class="contacts_info-text_title">Томск, Белая 8</h4>
+            <p class="contacts_info-text_data">2 этаж
+              <br />оф. 207-208
+            </p>
+          </div>
+        </div>
+        <div class="contacts_info">
+          <div class="contacts_info-img">
+            <svg class="contacts_info-img_icon">
+              <use xlink:href="assets/icons/symbols.svg#home"></use>
+            </svg>
+          </div>
+          <div class="contacts_info-text">
+            <h4 class="contacts_info-text_title">Отдел аренды</h4>
+            <p class="contacts_info-text_data">+7 499 350 0730
+              <br />hi@tagree.ru
+            </p>
+          </div>
+        </div>
+        <div class="contacts_info">
+          <div class="contacts_info-img">
+            <svg class="contacts_info-img_icon">
+              <use xlink:href="assets/icons/symbols.svg#star"></use>
+            </svg>
+          </div>
+          <div class="contacts_info-text">
+            <h4 class="contacts_info-text_title">Отдел мероприятий</h4>
+            <p class="contacts_info-text_data">+7 499 350 0730
+              <br />hi@tagree.ru
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts_map-container">
+        <div class="contacts_map" id="js-contactsMap"></div>
+      </div>
+    </section>
+
   </main>
+  <div class="doit">
+    <blockquote class="title-huge">
+      <span class="title-huge-part1">Просто делайте,</span>
+      <span class="title-huge-part2">что нравится,</span>
+      <br />
+      <span class="title-huge-part3">а мы вам поможем</span>
+    </blockquote>
+  </div>
+
   <div class="pp" id="js-eventPP">
     <div class="pp_wrapper">
       <div class="pp_sticky">

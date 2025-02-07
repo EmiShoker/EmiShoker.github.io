@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <main class="main">
+        <main class="page-main">
             @@include('blocks/aboutus.html')
 
             <div class="home">
@@ -28,9 +28,17 @@
                 @@include('blocks/upcoming.html', {"class": "home_upcoming" })
             </div>
 
-            <h2 class="section-title">контакты</h2>
-            <div class="map-container"><div class="contacts_map" id="js-contactsMap"></div></div>
+            @@include('blocks/contacts.html')
         </main>
+        <div class="doit">
+            <blockquote class="title-huge">
+                <span class="title-huge-part1">Просто делайте,</span>
+                <span class="title-huge-part2">что нравится,</span>
+                <br />
+                <span class="title-huge-part3">а мы вам поможем</span>
+            </blockquote>
+        </div>
+
         @@include('blocks/event-pp.html')
         <br />
         @@include('blocks/page-footer.html')

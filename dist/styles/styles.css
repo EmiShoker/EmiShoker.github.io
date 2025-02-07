@@ -42,7 +42,15 @@ body {
   line-height: 1.375;
   overflow-x: hidden;
 }
-.main {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: black;
+}
+main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -107,6 +115,15 @@ textarea {
   padding: 20px 0;
   line-height: 26px;
   font-size: 20px;
+}
+.btext {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #1f1e1e;
 }
 .title-text {
   display: -webkit-box;
@@ -1548,11 +1565,7 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   line-height: 19px;
 }
-.contacts_map {
-  width: 400px;
-  height: 400px;
-}
-.map-container {
+.contacts {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -1564,13 +1577,48 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+.contacts_map {
+  width: 762px;
+  height: 493px;
+}
+.contacts_wrapper {
+  margin: auto 0;
+}
+.contacts_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+.contacts_info:nth-of-type(3) {
+  margin-bottom: 0;
+}
+.contacts_info-img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 46px;
+  background-color: #1f1e1e;
+  width: 110px;
+  height: 110px;
+}
+.contacts_info-text {
+  margin-left: 50px;
+}
+.contacts_info-text_title {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+.contacts_info-text_data {
+  font-size: 16px;
 }
 .section-title {
   -webkit-box-sizing: border-box;
@@ -1587,7 +1635,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 624px;
   min-height: 62px;
-  margin: 100px auto 135px;
+  margin: 100px auto 140px;
   padding: 8px 45px;
   background-color: #1f1e1e;
   color: #83e1ff;
@@ -1606,14 +1654,22 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 624px;
 }
-.btext {
-  display: block;
-  margin-bottom: 5px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.3;
-  color: #1f1e1e;
+.doit {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 100px;
+  width: 100%;
+  font-family: "mak", serif;
+  text-align: right;
+  font-weight: 700;
+  font-size: 125px;
+  white-space: nowrap;
+}
+.title-huge {
+  margin: 0 0 0 -60px;
+}
+.title-huge-part3 {
+  margin-right: -180px;
 }
 .home-listing {
   margin-bottom: 95px;
@@ -2502,6 +2558,9 @@ button.swiper-pagination-bullet {
       -ms-transform: translate(0, -6px) rotate(-45deg);
           transform: translate(0, -6px) rotate(-45deg);
 }
+.page-main_title {
+  margin-top: 100px;
+}
 .page-main_title,
 .page-main_subtitle {
   font-family: "Lora", serif;
@@ -2510,7 +2569,6 @@ button.swiper-pagination-bullet {
   text-shadow: 0 0 16px,
             0 0 7px currentColor;
   text-align: center;
-  margin: 0;
   padding: 60px 0;
 }
 .page-main_lenni {
@@ -2540,7 +2598,7 @@ button.swiper-pagination-bullet {
           flex: 0 0 auto;
   position: relative;
   bottom: 0;
-  margin: 100px auto 0;
+  margin: 0 auto;
   width: 1334px;
   z-index: 100;
 }
@@ -2729,7 +2787,7 @@ button.swiper-pagination-bullet {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .map-container {
+  .contacts {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -2913,7 +2971,7 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .map-container {
+  .contacts {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -2998,7 +3056,7 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .map-container {
+  .contacts {
     padding-left: 20px;
     padding-right: 20px;
   }
