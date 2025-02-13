@@ -5,22 +5,22 @@
 @bw1020: ~"(max-width: 1019px)";
 @bw768: ~"(max-width: 767px)";
 @bw600: ~"(max-width: 599px)";
-@w600: ~"(min-width: 600px)";
 @bw650: ~"(max-width: 649px)";
-@w650: ~"(min-width: 650px)";
 @bw500: ~"(max-width: 499px)";
 @bw400: ~"(max-width: 399px)";
 @bw360: ~"(max-width: 359px)";
 @bw320: ~"(max-width: 319px)";
 @full-hd: ~"(max-width: 128px)";
 
+@w650: ~"(min-width: 650px)";
+@w600: ~"(min-width: 600px)";
 // Цветовая палитра
 @white: #ffffff;
 @black: #1f1e1e;
 
 @red: #bc3324;
-//@red-white: #83e1ff;
-//@red-dark: #a51505;
+@red-white: #ff1a4b;
+@red-dark: #a51505;
 
 @grey: #dededefa;
 @grey-white: #bfbfbf;
@@ -31,3 +31,8 @@
 @font1: "Open Sans", sans-serif;
 @font2: "Lora", serif;
 @font3: "mak", serif;
+
+::selection {
+    background: @red-white;
+    color: aliceblue;
+}

@@ -6,26 +6,26 @@
 
     <body>
         @@include('blocks/page-header.html')
-        <div class="page-main">
-            <h1 class="page-main_title">АРТ — ПРОСТРАНСТВО</h1>
-            <img class="page-main_lenni" src="assets/images/LENNI.svg" />
-            <h1 class="page-main_subtitle">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ<br />МЕСТО ДЛЯ НАСТОЯЩЕГО</h1>
+        <main class="page-main">
+            <div class="main-header">
+                <h1 class="main-header_title">АРТ — ПРОСТРАНСТВО</h1>
+                <img class="main-header_lenni" src="assets/images/LENNI.svg" />
+                <h1 class="main-header_subtitle">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ<br />МЕСТО ДЛЯ НАСТОЯЩЕГО</h1>
 
-            <div class="page-main_choice choice">
-                <h1 class="choice_title">Я хочу:</h1>
-                <div class="choice_btn-container">
-                    <button id="js-eventOpenBtn" class="choice_btn-r btn">Провести мероприятие</button>
-                    <button class="choice_btn-l btn">Стать арендатором</button>
+                <div class="main-header_choice choice">
+                    <h1 class="choice_title">Я хочу:</h1>
+                    <div class="choice_btn-container">
+                        <button id="js-eventOpenBtn" class="choice_btn-r btn">Провести мероприятие</button>
+                        <button class="choice_btn-b btn">Стать арендатором</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <main class="page-main">
             @@include('blocks/aboutus.html')
 
             <div class="home">
                 @@include('blocks/blog-listing.html', {"class": "home-listing"})
                 <br />
-                @@include('blocks/upcoming.html', {"class": "home_upcoming" })
+                @@include('blocks/upcoming.html', {"class": "home-upcoming" })
             </div>
 
             @@include('blocks/contacts.html')
@@ -42,6 +42,10 @@
         @@include('blocks/event-pp.html')
         <br />
         @@include('blocks/page-footer.html')
+        <script src="scripts/jquery-3.7.1.js"></script>
+        <script src="scripts/jquery.selectric.js"></script>
+        <script src="scripts/jquery.mask.js"></script>
+        <script src="scripts/air-datepicker.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key="></script>
         <script src="scripts/swiper.min.js"></script>
     </body>

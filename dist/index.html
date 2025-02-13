@@ -6,7 +6,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="icon" href="assets/favicons/favicon.ico" />
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
   <title>Academy</title>
   <meta charset="UTF-8" />
   <script defer src="scripts/main.min.js"></script>
@@ -25,7 +27,7 @@
         <nav class="page-header_nav">
           <a href="events.html" class="page-header_nav-link link">Мероприятия</a>
           <a href="#blog" class="page-header_nav-link link">Блог</a>
-          <a href="#" class="page-header_nav-link link">О нас</a>
+          <a href="#aboutus" class="page-header_nav-link link">О нас</a>
           <a href="#contacts" class="page-header_nav-link link">Контакты</a>
         </nav>
         <div class="page-header_nav-user">
@@ -49,23 +51,23 @@
     </header>
   </div>
 
-  <div class="page-main">
-    <h1 class="page-main_title">АРТ — ПРОСТРАНСТВО</h1>
-    <img class="page-main_lenni" src="assets/images/LENNI.svg" />
-    <h1 class="page-main_subtitle">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
-      <br />МЕСТО ДЛЯ НАСТОЯЩЕГО
-    </h1>
+  <main class="page-main">
+    <div class="main-header">
+      <h1 class="main-header_title">АРТ — ПРОСТРАНСТВО</h1>
+      <img class="main-header_lenni" src="assets/images/LENNI.svg" />
+      <h1 class="main-header_subtitle">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
+        <br />МЕСТО ДЛЯ НАСТОЯЩЕГО
+      </h1>
 
-    <div class="page-main_choice choice">
-      <h1 class="choice_title">Я хочу:</h1>
-      <div class="choice_btn-container">
-        <button id="js-eventOpenBtn" class="choice_btn-r btn">Провести мероприятие</button>
-        <button class="choice_btn-l btn">Стать арендатором</button>
+      <div class="main-header_choice choice">
+        <h1 class="choice_title">Я хочу:</h1>
+        <div class="choice_btn-container">
+          <button id="js-eventOpenBtn" class="choice_btn-r btn">Провести мероприятие</button>
+          <button class="choice_btn-b btn">Стать арендатором</button>
+        </div>
       </div>
     </div>
-  </div>
-  <main class="page-main">
-    <section class="about">
+    <section id="aboutus" class="about">
       <h2 class="section-title">О нас</h2>
       <p class="about_title title-text">Проект «Millennials»</p>
       <p class="about_text text">
@@ -104,8 +106,8 @@
             <br />
             Посмотрите, как это было классно.
           </p>
-          <a class="about_block2-grid2-link">
-            <span class="about_block2-grid2-link_text link">Смотреть</span>
+          <a class="about_block2-grid2-link link">
+            <span class="about_block2-grid2-link_text">Смотреть</span>
 
             <div class="about_block2-grid2-link_arrow">
               <svg class="arrow about_block2-grid2-link_arrow-icon">
@@ -227,7 +229,7 @@
       </section>
 
       <br />
-      <section class="upcoming home_upcoming">
+      <section class="upcoming home-upcoming">
         <div class="upcoming_wrapper">
           <div class="upcoming_container">
             <h2 class="upcoming_title section-title">Мероприятия</h2>
@@ -464,17 +466,30 @@
               <label class="field">
                 <span class="field_title">Планируемое количество посетителей:</span>
 
-                <select class="field_select" name="amount">
+                <select class="field_select js-selectric" name="amount" placeholder="Выберите планируемое число посетителей">
                   <option value="20">До 20 человек</option>
                   <option value="100">от 20 до 100 человек</option>
                   <option value="500">от 100 до 500 человек</option>
                   <option value="1000">более 500 человек</option>
                 </select>
               </label>
-              <label class="field">
-                <span class="field_title">Дата проведения:</span>
-                <input class="field_input" type="date" />
-              </label>
+              <!--
+                        <label class="field">оы
+                            <span class="field_title">Дата проведения:</span>
+                            <input class="field_input" type="date" />
+                        </label>
+                        -->
+              <div class="form_field field js-dateField">
+                <h6 class="field_title">Дата проведения:</h6>
+                <div class="field_date">
+                  <div class="field_date-inputs">
+                    <input class="field_date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                    <input class="field_date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                    <input class="field_date-input field_date-input-year js-dateYear" type="text" placeholder="ГГГГ" readonly />
+                  </div>
+                  <input class="field_date-picker js-dateInput" type="text" name="date" readonly required />
+                </div>
+              </div>
             </div>
 
             <label class="field">
@@ -490,12 +505,12 @@
 
             <label class="field">
               <span class="field_label">Телефон*</span>
-              <input class="field_input" type="text" placeholder="+7 (___) ___ __ __" maxlength="18" name="phone" required />
+              <input class="field_input js-mobileMask" type="tel" placeholder="Телефон" maxlength="18" name="phone" required />
             </label>
 
             <label class="field">
               <span class="field_label">Email*</span>
-              <input class="field_input" type="text" placeholder="Email" name="email" required />
+              <input class="field_input" type="email" placeholder="Email" name="email" required />
             </label>
           </div>
           <label class="field">
@@ -574,6 +589,10 @@
     </div>
   </footer>
 
+  <script src="scripts/jquery-3.7.1.js"></script>
+  <script src="scripts/jquery.selectric.js"></script>
+  <script src="scripts/jquery.mask.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key="></script>
   <script src="scripts/swiper.min.js"></script>
 </body>
