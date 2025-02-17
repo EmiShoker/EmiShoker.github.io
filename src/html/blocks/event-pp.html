@@ -11,7 +11,7 @@
         <div class="pp_container">
             <h2 class="pp_title">Заполните форму<br />и мы подберем площадку</h2>
 
-            <form class="pp_form form">
+            <form class="pp_form form" id="js-eventForm">
                 <div class="field_grid">
                     <div class="radio">
                         <span class="field_title">Формат мероприятия:</span>
@@ -50,12 +50,6 @@
                                 <option value="1000">более 500 человек</option>
                             </select>
                         </label>
-                        <!--
-                        <label class="field">оы
-                            <span class="field_title">Дата проведения:</span>
-                            <input class="field_input" type="date" />
-                        </label>
-                        -->
                         <div class="form_field field js-dateField">
                             <h6 class="field_title">Дата проведения:</h6>
                             <div class="field_date">
@@ -114,8 +108,8 @@
                     <textarea
                         class="field_textarea"
                         placeholder="Напишите что-нибудь"
-                        name="Пожелания"
-                        required></textarea>
+                        name="Пожелания">  
+                    </textarea>
                 </label>
                 <label class="check">
                     <input type="checkbox" name="agree" class="check_input" required checked />

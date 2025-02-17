@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="ru">
     <head>
-        <link rel="stylesheet" href="../styles/styles.css" />
-        <meta charset="UTF-8" />
-        <title>Title</title>
+        @@include('blocks/head.html')
+        <title>Вечер | The Best of Sade</title>
     </head>
     <body>
         <main class="main">
             <article class="event">
                 <form class="reserve">
                     <div class="reserve_checks">
-                        <h4 class="reserve_section-title">Забронровать столик</h4>
+                        <h4 class="reserve_section-title">Забронировать столик</h4>
 
                         <label class="reserve_check check check-red">
                             <input type="checkbox" name="table_1" class="check_input" />
@@ -286,5 +285,6 @@
                 </form>
             </article>
         </main>
+        @@include('blocks/page-footer.html')
     </body>
 </html>

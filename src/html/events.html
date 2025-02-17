@@ -15,16 +15,18 @@
                         <!-- prettier-ignore -->
                         @@loop('blocks/event-card.html', [
                             {
-                              "class": "listing_event-card",
-                              "img": "assets/images/events/Nirvana.svg",
-                              "alt": "nirvana",
-                              "title": "Собираемся и слушаем альбом Nirvana",
-                              "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
-                              "time": "07.12.2022 | начало 18.00",
-                              "datetime": "2022-12-07T18:00"
+                                "class": "listing_event-card",
+                                "link": "index.html",
+                                "img": "assets/images/events/Nirvana.svg",
+                                "alt": "nirvana",
+                                "title": "Собираемся и слушаем альбом Nirvana",
+                                "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                                "time": "07.12.2022 | начало 18.00",
+                                "datetime": "2022-12-07T18:00"
                             },
                             {
                               "class": "listing_event-card",
+                        "link": "index.html",
                               "img": "assets/images/events/HowStuffWorks.svg",
                               "alt": "stuff",
                               "title": "Есть тема, нужно обсудить с HowStuffWorks",
@@ -34,6 +36,7 @@
                             },
                             {
                               "class": "listing_event-card",
+                            "link": "event.html",
                               "img": "assets/images/events/Sade.svg",
                               "alt": "Sade",
                               "title": "Вечер | The Best of Sade",
@@ -43,6 +46,7 @@
                             },
                             {
                               "class": "listing_event-card",
+                        "link": "index.html",
                               "img": "assets/images/events/Malevich.svg",
                               "alt": "Malevich",
                               "title": "Выставка Малевича в Томске",
@@ -52,6 +56,7 @@
                             },
                             {
                               "class": "listing_event-card",
+                        "link": "index.html",
                               "img": "assets/images/events/Tatler.svg",
                               "alt": "Tatler",
                               "title": "Мастер — класс по студийной съемке от Tatler",
@@ -61,6 +66,7 @@
                             },
                             {
                               "class": "listing_event-card",
+                        "link": "index.html",
                               "img": "assets/images/events/Hatters.svg",
                               "alt": "Hatters",
                               "title": "Повесилимся на славу на концерте The Hatters",
@@ -92,6 +98,14 @@
                     @@include('blocks/table.html')
                 </section>
             </div>
+            <div class="events_choice choice">
+                <h1 class="choice_title">Я хочу:</h1>
+                <div class="choice_btn-container">
+                    <button id="js-eventOpenBtn" class="choice_btn-r btn">Провести мероприятие</button>
+                    <button class="choice_btn-b btn">Стать арендатором</button>
+                </div>
+            </div>
+            @@include('blocks/events-info.html')
         </main>
         @@include('blocks/page-footer.html')
     </body>

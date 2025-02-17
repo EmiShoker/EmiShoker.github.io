@@ -403,14 +403,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: #6c6c6c;
 }
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #6c6c6c;
-}
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #6c6c6c;
-}
 input::placeholder,
 textarea::placeholder {
   color: #6c6c6c;
@@ -425,14 +417,6 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
 input:focus::-ms-input-placeholder, textarea:focus::-ms-input-placeholder {
-  color: transparent;
-}
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
 input:focus::placeholder,
@@ -486,7 +470,6 @@ textarea {
   padding: 0 !important;
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(100%) !important;
   clip-path: inset(100%) !important;
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -920,7 +903,7 @@ textarea {
   border: 1px solid var(--adp-time-track-color);
   background: #fff;
   cursor: pointer;
-  -webkit-transition: background var(--adp-transition-duration);
+  -moz-transition: background var(--adp-transition-duration);
   transition: background var(--adp-transition-duration);
 }
 .air-datepicker-time--row input[type=range]::-ms-thumb {
@@ -931,7 +914,7 @@ textarea {
   border: 1px solid var(--adp-time-track-color);
   background: #fff;
   cursor: pointer;
-  -webkit-transition: background var(--adp-transition-duration);
+  -ms-transition: background var(--adp-transition-duration);
   transition: background var(--adp-transition-duration);
 }
 .air-datepicker-time--row input[type=range]::-webkit-slider-thumb {
@@ -1067,22 +1050,27 @@ textarea {
 }
 .air-datepicker.-from-top- {
   -webkit-transform: translateY(calc(var(--adp-transition-offset) * -1));
+      -ms-transform: translateY(calc(var(--adp-transition-offset) * -1));
           transform: translateY(calc(var(--adp-transition-offset) * -1));
 }
 .air-datepicker.-from-right- {
   -webkit-transform: translateX(var(--adp-transition-offset));
+      -ms-transform: translateX(var(--adp-transition-offset));
           transform: translateX(var(--adp-transition-offset));
 }
 .air-datepicker.-from-bottom- {
   -webkit-transform: translateY(var(--adp-transition-offset));
+      -ms-transform: translateY(var(--adp-transition-offset));
           transform: translateY(var(--adp-transition-offset));
 }
 .air-datepicker.-from-left- {
   -webkit-transform: translateX(calc(var(--adp-transition-offset) * -1));
+      -ms-transform: translateX(calc(var(--adp-transition-offset) * -1));
           transform: translateX(calc(var(--adp-transition-offset) * -1));
 }
 .air-datepicker.-active-:not(.-custom-position-) {
   -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
 }
@@ -1099,6 +1087,7 @@ textarea {
   right: auto;
   opacity: 1;
   -webkit-transform: none;
+      -ms-transform: none;
           transform: none;
 }
 .air-datepicker.-inline- .air-datepicker--pointer {
@@ -1123,10 +1112,12 @@ textarea {
 }
 .air-datepicker.-is-mobile-:not(.-custom-position-) {
   -webkit-transform: translate(-50%, calc(-50% + var(--adp-transition-offset)));
+      -ms-transform: translate(-50%, calc(-50% + var(--adp-transition-offset)));
           transform: translate(-50%, calc(-50% + var(--adp-transition-offset)));
 }
 .air-datepicker.-is-mobile-.-active-:not(.-custom-position-) {
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 .air-datepicker.-custom-position- {
@@ -1168,6 +1159,7 @@ textarea {
 .-top-right- .air-datepicker--pointer:after,
 [data-popper-placement^=top] .air-datepicker--pointer:after {
   -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 .-right-top- .air-datepicker--pointer,
@@ -1181,6 +1173,7 @@ textarea {
 .-right-bottom- .air-datepicker--pointer:after,
 [data-popper-placement^=right] .air-datepicker--pointer:after {
   -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
           transform: rotate(225deg);
 }
 .-bottom-left- .air-datepicker--pointer,
@@ -1194,6 +1187,7 @@ textarea {
 .-bottom-right- .air-datepicker--pointer:after,
 [data-popper-placement^=bottom] .air-datepicker--pointer:after {
   -webkit-transform: rotate(315deg);
+      -ms-transform: rotate(315deg);
           transform: rotate(315deg);
 }
 .-left-top- .air-datepicker--pointer,
@@ -1207,6 +1201,7 @@ textarea {
 .-left-bottom- .air-datepicker--pointer:after,
 [data-popper-placement^=left] .air-datepicker--pointer:after {
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .-top-left- .air-datepicker--pointer,
@@ -1294,9 +1289,7 @@ textarea {
   --adp-cell-background-color-selected-hover: #ff1a4b;
   --adp-background-color-hover: #dededefa;
   --adp-background-color-active: #6c6c6c;
-}
-.air-datepicker-nav--action {
-  background-color: #ff1a4b;
+  --adp-nav-arrow-color: #ff1a4b;
 }
 .air-datepicker-nav--title {
   color: #1f1e1e;
@@ -1546,11 +1539,13 @@ textarea {
 .selectric-wrapper::after {
   right: 22px;
   -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .selectric-wrapper::before {
   right: 27px;
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .selectric-open {
@@ -1558,10 +1553,12 @@ textarea {
 }
 .selectric-open.selectric-wrapper:after {
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .selectric-open.selectric-wrapper:before {
   -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .selectric-open .selectric-items {
@@ -1747,17 +1744,14 @@ textarea {
 }
 .swiper-css-mode.swiper-horizontal > .swiper-wrapper {
   -ms-scroll-snap-type: x mandatory;
-      -webkit-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
 .swiper-css-mode.swiper-vertical > .swiper-wrapper {
   -ms-scroll-snap-type: y mandatory;
-      -webkit-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
 }
 .swiper-css-mode.swiper-free-mode > .swiper-wrapper {
   -ms-scroll-snap-type: none;
-      -webkit-scroll-snap-type: none;
       scroll-snap-type: none;
 }
 .swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
@@ -1777,7 +1771,6 @@ textarea {
 }
 .swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
   -webkit-margin-start: var(--swiper-centered-offset-before);
-          -moz-margin-start: var(--swiper-centered-offset-before);
           margin-inline-start: var(--swiper-centered-offset-before);
 }
 .swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper::before {
@@ -1836,6 +1829,7 @@ textarea {
   margin-top: -21px;
   z-index: 10;
   -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
           transform-origin: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1940,11 +1934,13 @@ textarea {
   -o-object-fit: contain;
      object-fit: contain;
   -webkit-transform-origin: center;
+      -ms-transform-origin: center;
           transform-origin: center;
 }
 .swiper-rtl .swiper-button-next svg,
 .swiper-rtl .swiper-button-prev svg {
   -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .swiper-button-prev,
@@ -2013,31 +2009,38 @@ textarea {
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transform: scale(0.33);
+      -ms-transform: scale(0.33);
           transform: scale(0.33);
   position: relative;
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
   -webkit-transform: scale(0.66);
+      -ms-transform: scale(0.66);
           transform: scale(0.66);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
   -webkit-transform: scale(0.33);
+      -ms-transform: scale(0.33);
           transform: scale(0.33);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
   -webkit-transform: scale(0.66);
+      -ms-transform: scale(0.66);
           transform: scale(0.66);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
   -webkit-transform: scale(0.33);
+      -ms-transform: scale(0.33);
           transform: scale(0.33);
 }
 .swiper-pagination-bullet {
@@ -2085,6 +2088,7 @@ button.swiper-pagination-bullet {
 .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   top: 50%;
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 8px;
 }
@@ -2104,6 +2108,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
   -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   white-space: nowrap;
 }
@@ -2135,12 +2140,15 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
           transform-origin: left top;
 }
 .swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   -webkit-transform-origin: right top;
+      -ms-transform-origin: right top;
           transform-origin: right top;
 }
 .swiper-horizontal > .swiper-pagination-progressbar,
@@ -2290,6 +2298,7 @@ button.swiper-pagination-bullet {
   z-index: 1;
   visibility: hidden;
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
   width: 100%;
   height: 100%;
@@ -2299,6 +2308,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-cube.swiper-rtl .swiper-slide {
   -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
           transform-origin: 100% 0;
 }
 .swiper-cube .swiper-slide-active,
@@ -2381,6 +2391,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-cards .swiper-slide {
   -webkit-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
           transform-origin: center bottom;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -2391,12 +2402,14 @@ button.swiper-pagination-bullet {
   display: -ms-flexbox;
   display: flex;
   -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
           transform: scaleX(-1);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .swiper-arrow-prev:hover {
   -webkit-transform: scaleX(-1) rotate(-15deg) !important;
+      -ms-transform: scaleX(-1) rotate(-15deg) !important;
           transform: scaleX(-1) rotate(-15deg) !important;
 }
 .swiper-slide {
@@ -2682,17 +2695,12 @@ button.swiper-pagination-bullet {
 .article-card_title-link {
   margin: auto 0 40px;
   color: #1f1e1e;
-  -webkit-text-decoration-color: transparent;
   text-decoration-color: transparent;
   -webkit-transition: color 0.3s, text-decoration-color 0.3s;
-  -webkit-transition: color 0.3s, -webkit-text-decoration-color 0.3s;
-  transition: color 0.3s, -webkit-text-decoration-color 0.3s;
   transition: color 0.3s, text-decoration-color 0.3s;
-  transition: color 0.3s, text-decoration-color 0.3s, -webkit-text-decoration-color 0.3s;
 }
 .article-card_title-link:hover {
   color: #bc3324;
-  -webkit-text-decoration-color: #bc3324;
   text-decoration-color: #bc3324;
 }
 .article-card_title {
@@ -2780,13 +2788,14 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   margin: auto;
   width: 100%;
-  max-width: 624px;
   padding: 0 0 150px;
 }
 .choice_title {
   font-family: "Lora", serif;
+  font-size: 26px;
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
@@ -2801,16 +2810,13 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 624px;
+  margin-top: 30px;
   gap: 130px;
 }
 .choice_btn-r,
 .choice_btn-b {
-  padding: 15px 25px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 300px;
+  padding: 15px 0;
+  width: 272px;
 }
 .choice_btn-r {
   border: 1px solid #bc3324;
@@ -2841,6 +2847,7 @@ button.swiper-pagination-bullet {
 .arrow:hover {
   color: #bc3324;
   -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
 .arrow_icon {
@@ -2867,7 +2874,6 @@ button.swiper-pagination-bullet {
   padding: 0 !important;
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(100%) !important;
   clip-path: inset(100%) !important;
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -2952,7 +2958,6 @@ button.swiper-pagination-bullet {
   padding: 0 !important;
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(100%) !important;
   clip-path: inset(100%) !important;
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -2973,6 +2978,7 @@ button.swiper-pagination-bullet {
   border-bottom: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .check_mark {
@@ -3123,7 +3129,8 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align-last: end;
+  -moz-text-align-last: end;
+       text-align-last: end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3131,6 +3138,7 @@ button.swiper-pagination-bullet {
 }
 .listing_link:hover .listing_arrow-icon {
   -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
           transform: rotate(270deg);
 }
 .listing_arrow {
@@ -3144,6 +3152,7 @@ button.swiper-pagination-bullet {
   padding: 30px 0;
   margin: auto;
   -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 .event-card {
@@ -3172,7 +3181,6 @@ button.swiper-pagination-bullet {
 }
 .event-card_link:hover {
   color: #bc3324;
-  -webkit-text-decoration-color: #bc3324;
   text-decoration-color: #bc3324;
 }
 .event-card_picture {
@@ -3199,10 +3207,7 @@ button.swiper-pagination-bullet {
   -webkit-text-decoration: double;
           text-decoration: double;
   -webkit-transition: color 0.5s, text-decoration-color 0.5s;
-  -webkit-transition: color 0.5s, -webkit-text-decoration-color 0.5s;
-  transition: color 0.5s, -webkit-text-decoration-color 0.5s;
   transition: color 0.5s, text-decoration-color 0.5s;
-  transition: color 0.5s, text-decoration-color 0.5s, -webkit-text-decoration-color 0.5s;
 }
 .event-card_title:hover {
   text-decoration: underline;
@@ -3506,6 +3511,12 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+.field label.error,
+.field span.error {
+  display: block;
+  margin: 5px 0 0;
+  color: #bc3324;
+}
 .field_grid {
   display: grid;
   gap: 50px;
@@ -3756,6 +3767,7 @@ button.swiper-pagination-bullet {
      border-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #83e1ff), to(#fb3f4f)) 1;
      border-image: linear-gradient(#83e1ff 40%, #fb3f4f) 1;
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .events {
@@ -3768,6 +3780,55 @@ button.swiper-pagination-bullet {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -30px -120px;
+}
+.events_choice {
+  padding-bottom: 100px;
+}
+.events_info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.events_info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+  width: 401px;
+}
+.events_info-block_img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 46px;
+  background-color: #1f1e1e;
+  width: 110px;
+  height: 110px;
+}
+.events_info-block_text {
+  text-align: center;
+}
+.events_info-block_text-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 40px 0 0;
+}
+.events_info-block_text-data {
+  line-height: 23px;
+  font-size: 16px;
 }
 .event {
   padding: 40px 0 150px;
@@ -3802,6 +3863,7 @@ button.swiper-pagination-bullet {
 }
 .pp_x-btn:hover {
   -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 .pp_x-btn_icon {
@@ -3836,7 +3898,6 @@ button.swiper-pagination-bullet {
   padding: 0 40px 40px;
 }
 .pp_sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   -ms-flex-item-align: end;
@@ -3989,6 +4050,7 @@ button.swiper-pagination-bullet {
   border-radius: 2px;
   background-color: #1f1e1e;
   -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-transition: -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
   transition: -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
@@ -4034,12 +4096,14 @@ button.swiper-pagination-bullet {
 }
 .show-nav .page-header_nav-toggle::before {
   -webkit-transform: translate(0, 6px) rotate(45deg);
+      -ms-transform: translate(0, 6px) rotate(45deg);
           transform: translate(0, 6px) rotate(45deg);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 .show-nav .page-header_nav-toggle::after {
   -webkit-transform: translate(0, -6px) rotate(-45deg);
+      -ms-transform: translate(0, -6px) rotate(-45deg);
           transform: translate(0, -6px) rotate(-45deg);
 }
 .main-header_title {
@@ -4057,9 +4121,6 @@ button.swiper-pagination-bullet {
 }
 .main-header_lenni {
   width: 100%;
-}
-.main-header_choice {
-  text-align: center;
 }
 .line {
   width: 80%;
@@ -4161,6 +4222,7 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-transform: translateX(-65px);
+      -ms-transform: translateX(-65px);
           transform: translateX(-65px);
 }
 .page-footer_links-c-btn {
@@ -4168,6 +4230,7 @@ button.swiper-pagination-bullet {
 }
 .page-footer_links-c-btn:hover {
   -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 .page-footer_links-r {
@@ -4192,14 +4255,21 @@ button.swiper-pagination-bullet {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 410px;
+}
+.subscribe_input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .subscribe-field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .subscribe-btn {
   width: 135px;
@@ -4377,6 +4447,7 @@ button.swiper-pagination-bullet {
     transition: transform 0.4s;
     transition: transform 0.4s, -webkit-transform 0.4s;
     -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
             transform: translateX(-100%);
     overflow-x: hidden;
     overflow-y: auto;
@@ -4437,6 +4508,7 @@ button.swiper-pagination-bullet {
   }
   .show-nav .page-header_nav {
     -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
             transform: translateX(0);
   }
 }
