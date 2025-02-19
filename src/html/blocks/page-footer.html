@@ -14,23 +14,28 @@
         </nav>
         <form
             action="https://jsonplaceholder.typicode.com/posts"
-            id="js-eventForm"
+            id="js-subscribeForm"
             class="page-footer_subscribe subscribe subscribe-form">
-            <div class="subscribe-field">
+            <div class="subscribe_wrapper">
                 <span class="subscribe-field_text btext">Подпишись и будь в курсе происходящего</span>
                 <div class="subscribe_input-wrapper">
-                    <label class="field">
-                        <input class="field_input" type="email" placeholder="Email" name="email" />
+                    <label class="subscribe_field field">
+                        <input
+                            id="js-subscribeEmail"
+                            class="field_input"
+                            type="email"
+                            placeholder="Email"
+                            name="email" />
                     </label>
                     <button class="btn subscribe-btn" type="submit">Подписаться</button>
                 </div>
             </div>
 
             <label class="check">
+                <span class="check_label check_label-s"> Согласен на обработку персональных данных </span>
                 <input type="checkbox" name="agree" class="check_input" required checked />
 
                 <span class="check_mark"></span>
-                <span class="check_label check_label-s"> Согласен на обработку персональных данных </span>
             </label>
         </form>
     </div>

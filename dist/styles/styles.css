@@ -2811,12 +2811,13 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 30px;
+  max-width: 624px;
   gap: 130px;
 }
 .choice_btn-r,
 .choice_btn-b {
   padding: 15px 0;
-  width: 272px;
+  width: 300px;
 }
 .choice_btn-r {
   border: 1px solid #bc3324;
@@ -2977,6 +2978,7 @@ button.swiper-pagination-bullet {
   height: 12px;
   border-bottom: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
+  border-radius: 2px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -3514,7 +3516,7 @@ button.swiper-pagination-bullet {
 .field label.error,
 .field span.error {
   display: block;
-  margin: 5px 0 0;
+  margin: 10px 0 0;
   color: #bc3324;
 }
 .field_grid {
@@ -4258,18 +4260,13 @@ button.swiper-pagination-bullet {
   width: 410px;
 }
 .subscribe_input-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
 }
-.subscribe-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.subscribe_field .field_input {
+  width: 275px;
 }
 .subscribe-btn {
   width: 135px;

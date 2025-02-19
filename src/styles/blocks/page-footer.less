@@ -103,19 +103,15 @@
     display: flex;
     flex-direction: column;
     width: 410px;
+
     &_input-wrapper {
-        display: flex;        
+        display: inline-flex;
+        width: 100%;
     }
-
-    &-field {
-        display: flex;
-        flex-direction: column;
-        //width: 275px;
-        //align-items: center;
-        &_text {
-            
+    &_field {
+        .field_input {
+            width: 275px;
         }
-
     }
     &-btn {
         width: 135px;
@@ -123,6 +119,7 @@
         color: @white;
         height: 55px;
         padding: 0;
+
         &:hover {
             background-color: @white;
             color: @black;
