@@ -2,6 +2,7 @@
     display: grid;
     gap: 65px 11%;
     grid-template-columns: 405px calc(89% - 405px);
+
     grid-template-areas:
         "checks scheme"
         "order legend";
@@ -26,7 +27,17 @@
             "checks"
             "order";
     }
-
+    &_section-title {
+        font-size: 18px;
+        color: @black;
+        margin: 40px 0 20px;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+    &_check {
+        margin: 0 0 10px;
+    }
     &_scheme-wrapper {
         position: relative;
         width: 100%;
@@ -35,7 +46,6 @@
             content: "";
             display: block;
             width: 100%;
-            padding-top: 51.15384%;
         }
     }
     &_scene {
@@ -72,33 +82,92 @@
     }
 }
 .reserve_checks {
+    display: flex;
+    flex-direction: column;
     grid-area: checks;
+
+    &-title {
+        margin-bottom: 30px;
+    }
 }
 .reserve_order {
     grid-area: order;
-}
-.reserve_checks {
-    grid-area: checks;
-}
-.reserve_legend {
-    grid-area: legend;
-}
-.check {
-    &-red {
-        color: @red;
-        .check_mark {
-            border-color: @red;
-        }
-        .check_input {
-            &:checked {
-                & ~ .check mark {
-                    background-color: @red;
-                }
+    width: 405px;
+
+    .reserve_tickets-list {
+        .reserve_tickets {
+            display: flex;
+            justify-content: space-between;
+            margin: 18px 0 0;
+            .reserve_sum {
+                .btext;
             }
         }
     }
-    &-disabled {
-        pointer-events: none;
-        opacity: 0.5;
+    .reserve_total {
+        text-align: center;
+        margin: 28px 0 53px;
+        .btext;
+    }
+    .reserve_submit {
+        margin-top: 53px;
+        width: 100%;
+    }
+}
+.reserve_legend {
+    grid-area: legend;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 14px;
+    .reserve_price {
+        p {
+            margin-top: 0;
+            position: relative;
+            padding-left: 35px;
+        }
+        p::before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-color: @red-dark;
+        }
+        p:nth-child(2)::before {
+            background-color: @black;
+        }
+    }
+    .reserve_note {
+        p {
+            margin-top: 0;
+            position: relative;
+            padding-left: 45px;
+        }
+        p::before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            border: 1px solid @red-dark;
+            border-radius: 50%;
+        }
+        p::after {
+            content: " ";
+            position: absolute;
+            left: -10px;
+            width: 24px;
+            height: 24px;
+            border: 1px solid @black;
+            border-radius: 50%;
+        }
+        p:nth-child(2)::before {
+            background-color: @grey-white;
+            border: none;
+        }
+        p:nth-child(2)::after {
+            content: none;
+        }
     }
 }

@@ -5,12 +5,72 @@
         <title>Вечер | The Best of Sade</title>
     </head>
     <body>
-        @@inclide('blocks/page-header.html')
-        <main class="main">
+        @@include('blocks/page-header.html')
+        <main class="page-main">
             <article class="event">
+                <div class="event_preview preview">
+                    <h2 class="preview_title title">Вечер | The Best of Sade</h2>
+                    <div class="preview_info">
+                        <div class="preview_info-date">
+                            <span class="preview_info-date_line line"></span>
+                            <p class="preview_info-date_number">16/12/2024</p>
+                            <p>Кафе «Птичка»</p>
+                            <span class="preview_info-date_line line"></span>
+                        </div>
+                        <picture>
+                            <img src="assets/images/events/Sade.svg" alt="Sade" class="preview-img" />
+                        </picture>
+                        <div class="preview_info-date">
+                            <span class="preview_info-date_line-r line"></span>
+                            <p><span class="preview_info-date_number">20.00</span> начало</p>
+                            <p>Ленина 10 | 2 этаж</p>
+                            <span class="preview_info-date_line-r line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event_program">
+                    <h4>Программа мероприятия:</h4>
+
+                    <div class="event_program_event-list">
+                        <p>20:15 — Приветствие гостей</p>
+                        <p>20:30 — Первая подача блюд | Салаты</p>
+                        <p>20:40 — Живой вокал | Композиции 1-3</p>
+                        <p>21:20 — Подача горячих блюд</p>
+                        <p>21:30 — Живой вокал | Композиции 4-7</p>
+                        <p>22:15 — Подача десерта</p>
+                        <p>22:30 — Живой вокал | Композиции 8-9</p>
+                        <p>23:00 — Завершение вечера</p>
+                    </div>
+
+                    <h4>The Best Of Sade</h4>
+                    <p>
+                        Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые<br />
+                        популярные хиты группы, раритеты и их любимые треки.
+                        <br /><br />
+                        Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
+                        <br />
+                        Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и
+                        продав
+                        <br />
+                        более 2 миллионов копий в Европе.
+                    </p>
+                    <div class="event_program_song-list">
+                        <ol>
+                            <li>Your Love Is King</li>
+                            <li>Hang On To Your Love</li>
+                            <li>Smooth Operator</li>
+                            <li>Jezebel</li>
+                            <li>The Sweetest Taboo</li>
+                            <li>Is It A Crime</li>
+                            <li>Never As Good As The First Time</li>
+                            <li>Love Is Stronger Than Pride</li>
+                            <li>Paradise</li>
+                        </ol>
+                    </div>
+                </div>
                 <form class="reserve">
                     <div class="reserve_checks">
-                        <h4 class="reserve_section-title">Забронировать столик</h4>
+                        <h4 class="reserve_checks-title">Забронировать столик</h4>
 
                         <label class="reserve_check check check-red">
                             <input type="checkbox" name="table_1" class="check_input" />
@@ -40,6 +100,36 @@
                             <input type="checkbox" name="table_5" class="check_input" />
                             <span class="check_mark"></span>
                             <span class="check_label">5 стол</span>
+                        </label>
+                        <label class="reserve_check check">
+                            <input type="checkbox" name="table_6" class="check_input" />
+                            <span class="check_mark"></span>
+                            <span class="check_label">6 стол</span>
+                        </label>
+                        <label class="reserve_check check check-red">
+                            <input type="checkbox" name="table_7" class="check_input" />
+                            <span class="check_mark"></span>
+                            <span class="check_label">7 стол</span>
+                        </label>
+                        <label class="reserve_check check check-red">
+                            <input type="checkbox" name="table_8" class="check_input" />
+                            <span class="check_mark"></span>
+                            <span class="check_label">8 стол</span>
+                        </label>
+                        <label class="reserve_check check check-red">
+                            <input type="checkbox" name="table_9" class="check_input" />
+                            <span class="check_mark"></span>
+                            <span class="check_label">9 стол</span>
+                        </label>
+                        <label class="reserve_check check">
+                            <input type="checkbox" name="table_10" class="check_input" />
+                            <span class="check_mark"></span>
+                            <span class="check_label">10 стол</span>
+                        </label>
+                        <label class="reserve_check check">
+                            <input type="checkbox" name="table_11" class="check_input" />
+                            <span class="check_mark"></span>
+                            <span class="check_label">11 стол</span>
                         </label>
                     </div>
                     <div class="reserve_scheme">
@@ -97,8 +187,8 @@
                                         <rect x="685" y="4" width="95" height="121" fill="transparent" />
                                     </g>
 
-                                    <g class="scene__table">
-                                        <g class="scene__table-group" stroke="#1F1E1E">
+                                    <g class="scene_table">
+                                        <g class="scene_table-group" stroke="#1F1E1E">
                                             <rect x="712.5" y="185.5" width="40" height="93" />
                                             <circle cx="697" cy="197" r="11.5" />
                                             <circle cx="768" cy="198" r="11.5" />
@@ -110,13 +200,13 @@
                                         </g>
 
                                         <path
-                                            class="scene__table-num"
+                                            class="scene_table-num"
                                             d="M737.479 229.818C737.479 230.704 737.208 231.465 736.668 232.104C736.128 232.735 735.346 233.194 734.324 233.48V233.539C736.707 233.839 737.898 234.965 737.898 236.918C737.898 238.246 737.371 239.291 736.316 240.053C735.268 240.814 733.81 241.195 731.941 241.195C731.173 241.195 730.46 241.14 729.803 241.029C729.152 240.919 728.445 240.717 727.684 240.424V237.221C728.309 237.54 728.943 237.777 729.588 237.934C730.239 238.083 730.838 238.158 731.385 238.158C732.231 238.158 732.846 238.041 733.23 237.807C733.621 237.566 733.816 237.191 733.816 236.684C733.816 236.293 733.715 235.993 733.514 235.785C733.312 235.57 732.986 235.411 732.537 235.307C732.088 235.196 731.502 235.141 730.779 235.141H729.9V232.24H730.799C732.758 232.24 733.738 231.739 733.738 230.736C733.738 230.359 733.592 230.079 733.299 229.896C733.012 229.714 732.625 229.623 732.137 229.623C731.225 229.623 730.281 229.929 729.305 230.541L727.703 227.963C728.458 227.442 729.23 227.071 730.018 226.85C730.812 226.628 731.72 226.518 732.742 226.518C734.22 226.518 735.379 226.811 736.219 227.396C737.059 227.982 737.479 228.79 737.479 229.818Z"
                                             fill="#1F1E1E" />
                                         <rect x="685" y="185" width="95" height="121" fill="transparent" />
                                     </g>
 
-                                    <g class="scene__table scene__table--red">
+                                    <g class="scene_table scene_table-red">
                                         <g class="scene__table-group" stroke="#BC3324">
                                             <rect x="507.5" y="182.5" width="83" height="28" />
 
@@ -128,13 +218,13 @@
                                         </g>
 
                                         <path
-                                            class="scene__table-num"
+                                            class="scene_table-num"
                                             d="M554.416 199.236H552.844V202H549.035V199.236H543.342V196.404L549.279 187.723H552.844V196.355H554.416V199.236ZM549.035 196.355V194.695C549.035 194.383 549.045 193.963 549.064 193.436C549.09 192.902 549.11 192.622 549.123 192.596H549.016C548.794 193.097 548.544 193.566 548.264 194.002L546.682 196.355H549.035Z"
                                             fill="#BC3324" />
                                         <rect x="507" y="155" width="111" height="83" fill="transparent" />
                                     </g>
 
-                                    <g class="scene__table">
+                                    <g class="scene_table">
                                         <g class="scene__table-group" stroke="#1F1E1E">
                                             <rect x="494.5" y="278.5" width="40" height="93" />
 
@@ -148,14 +238,14 @@
                                         </g>
 
                                         <path
-                                            class="scene__table-num"
+                                            class="scene_table-num"
                                             d="M515.484 322.645C516.305 322.645 517.044 322.837 517.701 323.221C518.365 323.598 518.88 324.135 519.244 324.832C519.615 325.529 519.801 326.333 519.801 327.244C519.801 328.839 519.319 330.063 518.355 330.916C517.398 331.769 515.947 332.195 514 332.195C512.333 332.195 510.973 331.938 509.918 331.424V328.26C510.484 328.52 511.122 328.735 511.832 328.904C512.548 329.074 513.163 329.158 513.678 329.158C514.394 329.158 514.944 329.008 515.328 328.709C515.712 328.403 515.904 327.954 515.904 327.361C515.904 326.814 515.709 326.388 515.318 326.082C514.928 325.776 514.335 325.623 513.541 325.623C512.936 325.623 512.281 325.737 511.578 325.965L510.162 325.262L510.699 317.723H518.844V320.936H513.98L513.805 322.82C514.312 322.723 514.674 322.671 514.889 322.664C515.104 322.651 515.302 322.645 515.484 322.645Z"
                                             fill="#1F1E1E" />
                                         <rect x="467" y="278" width="95" height="121" fill="transparent" />
                                     </g>
 
-                                    <g class="scene__table">
-                                        <g class="scene__table-group" stroke="#1F1E1E">
+                                    <g class="scene_table">
+                                        <g class="scene_table-group" stroke="#1F1E1E">
                                             <rect x="273.5" y="278.5" width="40" height="93" />
                                             <circle cx="258" cy="290" r="11.5" />
                                             <circle cx="329" cy="291" r="11.5" />
@@ -269,20 +359,31 @@
 
                         <div class="reserve_tickets-list">
                             <div class="reserve_tickets">
-                                <div class="reserve_qty" data-caption="шт." data-price="1400">0</div>
-                                <div class="reserve_sum" data-currency="Р">0</div>
+                                <div class="reserve_qty" data-caption="0 шт." data-price="1400 ₽">0 шт. | 1400 ₽</div>
+                                <div class="reserve_sum" data-currency="₽">0 ₽</div>
                             </div>
 
                             <div class="reserve_tickets">
-                                <div class="reserve_qty" data-captiob="шт." data-price="1250">0</div>
-                                <div class="reserve_sum" data-currency="Р">0</div>
+                                <div class="reserve_qty" data-captiob="0 шт." data-price="1250 ₽">0 шт. | 1250 ₽</div>
+                                <div class="reserve_sum" data-currency="₽">0 ₽</div>
                             </div>
                         </div>
-                        <div class="reserve_total" data-caption="Сумма" data-currency="₽">0</div>
+                        <div class="reserve_total" data-caption="Сумма" data-currency="₽">Сумма 0 ₽</div>
 
                         <button type="submit" class="btn btn-red reserve_submit">Купить билеты</button>
                     </div>
-                    <div class="reserve_legend">Легенда</div>
+                    <div class="reserve_legend">
+                        <h4 class="reserve_section-title">Стоимость пригласительного билета</h4>
+                        <div class="reserve_price">
+                            <p>1400 ₽ | 1 персона</p>
+                            <p>1250 ₽ | 1 персона</p>
+                        </div>
+                        <h4 class="reserve_section-title">Примечание</h4>
+                        <div class="reserve_note">
+                            <p>доступные места</p>
+                            <p>забронировано</p>
+                        </div>
+                    </div>
                 </form>
             </article>
         </main>

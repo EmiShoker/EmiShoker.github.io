@@ -64,14 +64,13 @@
 
     //Map
     const contactsMap = document.querySelector("#js-contactsMap");
-
     if (contactsMap) {
         const mapStyles = [
             {
                 elementType: "geometry",
                 stylers: [
                     {
-                        color: "#242f3e"
+                        color: "#181818"
                     }
                 ]
             },
@@ -229,7 +228,6 @@
         ];
 
         const mapCenter = new google.maps.LatLng(56.49387, 84.96274);
-
         const mapOptions = {
             center: mapCenter,
             disableDefaultUI: true,
