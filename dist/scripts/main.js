@@ -40,6 +40,28 @@
         });
     }
 
+    //старый пп
+    //
+    ////if (eventPP) {
+    //    const eventOpenBtn = document.querySelector("#js-eventOpenBtn");
+    //
+    //    eventOpenBtn.addEventListener("click", function () {
+    //        root.classList.add("show-event-popup");
+    //    });
+    //
+    //    eventPP.addEventListener("click", function (event) {
+    //        if (event.target === this || event.target.classList.contains("js-ppCloseBtn")) {
+    //            root.classList.remove("show-event-popup");
+    //        }
+    //    });
+    //
+    //    document.addEventListener("keyup", function (event) {
+    //        if (event.key === "Escape" || event.keyCode === 27) {
+    //            root.classList.remove("show-event-popup");
+    //        }
+    //    });
+    //}
+
     //Swiper
     const swipers = document.querySelectorAll(".js-swiper");
     swipers.forEach(function (swpr) {
@@ -334,7 +356,7 @@
                     success: function () {
                         subscribeEmail.val("");
                         subscribeEmail.blur();
-                        alert("Вы успешно подписались на рассылку новостей");
+                        toastr.info("Вы успешно подписались на рассылку новостей");
                     },
                     error: function () {
                         alert("Что-то пошло не так, попробуйте еще раз");
@@ -343,24 +365,22 @@
             }
         });
     }
-})();
 
-//if (eventPP) {
-//    const eventOpenBtn = document.querySelector("#js-eventOpenBtn");
-//
-//    eventOpenBtn.addEventListener("click", function () {
-//        root.classList.add("show-event-popup");
-//    });
-//
-//    eventPP.addEventListener("click", function (event) {
-//        if (event.target === this || event.target.classList.contains("js-ppCloseBtn")) {
-//            root.classList.remove("show-event-popup");
-//        }
-//    });
-//
-//    document.addEventListener("keyup", function (event) {
-//        if (event.key === "Escape" || event.keyCode === 27) {
-//            root.classList.remove("show-event-popup");
-//        }
-//    });
-//}
+    toastr.options = {
+        closeButton: true,
+        debug: false,
+        newestOnTop: true,
+        progressBar: true,
+        positionClass: "toast-top-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "200",
+        hideDuration: "1000",
+        timeOut: "3000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+    };
+})();

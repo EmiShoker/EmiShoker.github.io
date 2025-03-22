@@ -6137,4 +6137,3 @@ var Swiper = (function () {
   return ie.use(ge), ie;
 })();
 //# sourceMappingURL=swiper-bundle.min.js.map
-Объяснить;

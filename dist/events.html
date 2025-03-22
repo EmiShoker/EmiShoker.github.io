@@ -46,7 +46,8 @@
   <script defer src="scripts/jquery.validate-init.js"></script>
   <script defer src="scripts/air-datepicker.js"></script>
   <script defer src="https://maps.googleapis.com/maps/api/js?key="></script>
-  <script defer src="scripts/swiper.min.js"></script>
+  <script defer src="scripts/swiper.js"></script>
+  <script defer src="scripts/toastr.js"></script>
 
   <script defer src="scripts/main.min.js"></script>
 
@@ -305,7 +306,7 @@
     <div class="events_choice choice">
       <h1 class="choice_title">Я хочу:</h1>
       <div class="choice_btn-container">
-        <button id="js-eventOpenBtn" class="choice_btn-r btn">Провести мероприятие</button>
+        <button id="js-eventOpenBtn" class="choice_btn btn-red btn">Провести мероприятие</button>
         <button class="choice_btn-b btn">Стать арендатором</button>
       </div>
     </div>
@@ -379,7 +380,7 @@
           <span class="subscribe-field_text btext">Подпишись и будь в курсе происходящего</span>
           <div class="subscribe_input-wrapper">
             <label class="subscribe_field field">
-              <input id="js-subscribeEmail" class="field_input" type="email" placeholder="Email" name="email" />
+              <input id="js-subscribeEmail" class="field_input" type="email" placeholder="Email" name="email" required />
             </label>
             <button class="btn subscribe-btn" type="submit">Подписаться</button>
           </div>
