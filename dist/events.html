@@ -306,7 +306,7 @@
     <div class="events_choice choice">
       <h1 class="choice_title">Я хочу:</h1>
       <div class="choice_btn-container">
-        <button id="js-eventOpenBtn" class="choice_btn btn-red btn">Провести мероприятие</button>
+        <button id="js-eventOpenBtn" class="choice_btn-r btn btn-red">Провести мероприятие</button>
         <button class="choice_btn-b btn">Стать арендатором</button>
       </div>
     </div>
@@ -361,6 +361,113 @@
     </section>
 
   </main>
+  <div class="pp" id="js-eventPP">
+    <div class="pp_wrapper">
+      <div class="pp_sticky">
+        <button class="pp_x-btn x-btn js-ppCloseBtn">
+          <svg class="x-btn_icon" width="24" height="24">
+            <use class="js-ppCloseBtn" xlink:href="assets/icons/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="pp_container">
+        <h2 class="pp_title">Заполните форму
+          <br />и мы подберем площадку
+        </h2>
+
+        <form class="pp_form form" id="js-eventForm">
+          <div class="field_grid">
+            <div class="radio">
+              <span class="field_title">Формат мероприятия:</span>
+              <label class="radio_item">
+                <input class="radio_input" type="radio" name="format" value="seminar" checked />
+                <span class="radio_mark"></span>
+                <span class="radio_label">Мастер-класс/семинар</span>
+              </label>
+              <label class="radio_item">
+                <input class="radio_input" type="radio" name="format" value="concert" />
+                <span class="radio_mark"></span>
+                <span class="radio_label">Концерт/выступление</span>
+              </label>
+              <label class="radio_item">
+                <input class="radio_input" type="radio" name="format" value="concert" />
+                <span class="radio_mark"></span>
+                <span class="radio_label">Выставка/показ</span>
+              </label>
+              <label class="radio_item">
+                <input class="radio_input" type="radio" name="format" value="concert" />
+                <span class="radio_mark"></span>
+                <span class="radio_label">Другое</span>
+              </label>
+            </div>
+            <div class="field_group">
+              <label class="field">
+                <span class="field_title">Планируемое количество посетителей:</span>
+
+                <select class="field_select js-selectric" name="amount" placeholder="Выберите планируемое число посетителей">
+                  <option value="20">До 20 человек</option>
+                  <option value="100">от 20 до 100 человек</option>
+                  <option value="500">от 100 до 500 человек</option>
+                  <option value="1000">более 500 человек</option>
+                </select>
+              </label>
+              <div class="form_field field js-dateField">
+                <h6 class="field_title">Дата проведения:</h6>
+                <div class="field_date">
+                  <div class="field_date-inputs">
+                    <input class="field_date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                    <input class="field_date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                    <input class="field_date-input field_date-input-year js-dateYear" type="text" placeholder="ГГГГ" readonly />
+                  </div>
+                  <input class="field_date-picker js-dateInput" type="text" name="date" readonly required />
+                </div>
+              </div>
+            </div>
+
+            <label class="field">
+              <span class="field_title">Контакные данные:</span>
+              <span class="field_label">Имя*</span>
+              <input class="field_input" type="text" placeholder="Имя" name="name" required />
+            </label>
+
+            <label class="field">
+              <span class="field_label">Фамилия*</span>
+              <input class="field_input" type="text" placeholder="Фамилия" name="surname" required />
+            </label>
+
+            <label class="field">
+              <span class="field_label">Телефон*</span>
+              <input class="field_input js-mobileMask" type="tel" placeholder="Телефон" maxlength="18" name="phone" required />
+            </label>
+
+            <label class="field">
+              <span class="field_label">Email*</span>
+              <input class="field_input" type="email" placeholder="Email" name="email" required />
+            </label>
+          </div>
+          <label class="field">
+            <span class="field_title">Есть пожелания? Напишите нам:</span>
+            <textarea class="field_textarea" placeholder="Напишите что-нибудь" name="Пожелания"> </textarea>
+          </label>
+          <label class="check pp_btn-check">
+            <span class="check_label check_label-s">
+              Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных
+            </span>
+            <input type="checkbox" name="agree" class="check_input" required checked />
+
+            <span class="check_mark"></span>
+          </label>
+          <div class="pp_btn">
+            <button class="pp_btn-submit btn" type="submit">Отправить</button>
+            <button class="pp_btn-close btn js-ppCloseBtn" type="button">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <br />
   <footer class="page-footer">
     <div class="page-footer_lines">
       <span class="page-footer_line line"></span>
