@@ -3130,14 +3130,14 @@ button.toast-close-button {
   font-family: "mak", serif;
   text-align: right;
   font-weight: 700;
-  font-size: 125px;
+  font-size: 117px;
   white-space: nowrap;
 }
 .title-huge {
   margin: 0 0 0 -60px;
 }
 .title-huge-part3 {
-  margin-right: -180px;
+  margin-right: -50px;
 }
 .contacts {
   -webkit-box-sizing: border-box;
@@ -4190,6 +4190,26 @@ button.toast-close-button {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+.breadcrumbs_container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding: 0;
+}
+.breadcrumbs_items {
+  list-style: none;
+}
+.breadcrumbs_item {
+  display: inline;
+}
+.breadcrumbs_item + .breadcrumbs_item::before {
+  content: "/";
+}
 .event {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4781,6 +4801,10 @@ button.toast-close-button {
     font-size: 20px;
     line-height: 27px;
   }
+  .breadcrumbs_container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .event {
     padding-left: 30px;
     padding-right: 30px;
@@ -4982,6 +5006,10 @@ button.toast-close-button {
     font-size: 16px;
     line-height: 22px;
   }
+  .breadcrumbs_container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .event {
     padding-left: 20px;
     padding-right: 20px;
@@ -5050,6 +5078,10 @@ button.toast-close-button {
     padding-right: 20px;
   }
   .upcoming_container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .breadcrumbs_container {
     padding-left: 20px;
     padding-right: 20px;
   }
